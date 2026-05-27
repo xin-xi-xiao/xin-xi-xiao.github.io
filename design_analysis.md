@@ -43,3 +43,5 @@ Mingjun Wang's homepage should combine Bei Yu's rigorous academic organization w
 - The profile image is displayed as a rounded-rectangle portrait rather than a circular crop. The supplied certificate-style photo is already tightly framed, so a circle enlarges the face too much and removes useful context.
 - Publications are ordered by year first, then by author contribution and relevance to the research narrative. First-author and co-first AI4EDA papers lead the 2026 group, while the IEEE TCAD Early Access paper remains clearly visible in the same year group.
 - Awards are ordered by year and then by public research/competition signal before scholarships. The duplicate EDA2/EDA² 2023 award from the CV is represented once.
+- Each publication card explicitly marks whether the entry is a journal article or a conference paper, because the selected list mixes TCAD journal papers with conference papers.
+- The CSS file is versioned in the generated HTML to avoid old GitHub Pages/browser caches preserving the previous circular portrait rule.

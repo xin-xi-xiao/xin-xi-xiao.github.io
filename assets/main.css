@@ -179,17 +179,18 @@ h3 {
   font-size: var(--fs-meta);
 }
 
-.portrait {
-  width: 170px;
-  height: 238px;
+.portrait-card {
+  width: 160px;
+  height: 224px;
   display: block;
   margin: 0 auto 14px;
   border: 1px solid var(--c-border);
-  border-radius: var(--radius-card);
+  border-radius: var(--radius-card) !important;
   background: #fff;
   object-fit: contain;
   object-position: center top;
   box-shadow: 0 8px 24px rgba(31, 41, 55, 0.08);
+  clip-path: inset(0 round 8px);
 }
 
 .affiliation-logos {
@@ -344,6 +345,7 @@ h3 {
 }
 
 .venue,
+.type-badge,
 .award-badge {
   display: inline-flex;
   align-items: center;
@@ -354,6 +356,22 @@ h3 {
   color: #fff;
   font-size: 12px;
   font-weight: 800;
+}
+
+.type-badge {
+  border: 1px solid var(--c-border);
+  background: #fff;
+  color: var(--c-text-muted);
+}
+
+.type-badge.journal {
+  border-color: rgba(5, 150, 105, 0.28);
+  color: var(--badge-tcad);
+}
+
+.type-badge.conference {
+  border-color: rgba(31, 58, 147, 0.22);
+  color: var(--c-primary);
 }
 
 .award-badge {
@@ -504,9 +522,9 @@ h3 {
     order: -1;
   }
 
-  .portrait {
-    width: 150px;
-    height: 210px;
+  .portrait-card {
+    width: 142px;
+    height: 199px;
   }
 
   .hero-bio {
