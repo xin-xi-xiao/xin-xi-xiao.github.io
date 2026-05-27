@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Mingjun Wang is a Ph.D. student in Computer Science and Engineering at The Chinese University of Hong Kong, working on AI for EDA, circuit representation learning, 3D IC design, and fault simulation." />
+  <meta name="description" content="Mingjun Wang is a Ph.D. student in Computer Science and Engineering at The Chinese University of Hong Kong, working on AI4EDA, 3D IC design automation, circuit representation learning, and timing/power prediction." />
   <meta property="og:title" content="Mingjun Wang" />
-  <meta property="og:description" content="Mingjun Wang is a Ph.D. student in Computer Science and Engineering at The Chinese University of Hong Kong, working on AI for EDA, circuit representation learning, 3D IC design, and fault simulation." />
+  <meta property="og:description" content="Mingjun Wang is a Ph.D. student in Computer Science and Engineering at The Chinese University of Hong Kong, working on AI4EDA, 3D IC design automation, circuit representation learning, and timing/power prediction." />
   <meta property="og:type" content="website" />
   <meta name="generator" content="jemdoc-style renderer" />
   <title>Mingjun Wang</title>
-  <link rel="stylesheet" href="assets/main.css?v=20260528b" type="text/css" />
+  <link rel="stylesheet" href="assets/main.css?v=20260528c" type="text/css" />
 </head>
 <body>
 <header class="topbar">
@@ -31,9 +31,15 @@
     <div class="hero-main">
       <h1>Mingjun Wang</h1>
       <p class="subtitle">Ph.D. Student · Department of Computer Science and Engineering · The Chinese University of Hong Kong</p>
-      <p class="tagline">AI for EDA · Circuit Representation Learning · 3D IC Design · Fault Simulation</p>
+      <p class="tagline">AI4EDA · 3D IC Design Automation · Circuit Representation Learning · Timing / Power Prediction</p>
+      <div class="hero-pills" aria-label="Primary research areas">
+        <span>AI4EDA</span>
+        <span>3D IC</span>
+        <span>Timing / Power</span>
+        <span>Circuit Data</span>
+      </div>
       <p class="hero-bio">
-        I am a Ph.D. student in Computer Science and Engineering at The Chinese University of Hong Kong, advised by Prof. Bei Yu. My research focuses on AI-assisted chip design and verification, with interests in multi-modal circuit understanding, cross-stage timing and power prediction, 3D IC design automation, and scalable fault simulation.
+        I am a Ph.D. student in Computer Science and Engineering at The Chinese University of Hong Kong, advised by Prof. Bei Yu. My research primarily focuses on AI4EDA and 3D IC design automation, especially multi-modal circuit understanding, cross-stage timing and power prediction, circuit representation learning, and scalable verification.
       </p>
       <div class="link-row">
         <a href="mailto:1155251294@link.cuhk.edu.hk">Email</a>
@@ -44,7 +50,7 @@
       <a class="primary-button" href="assets/cv.pdf" target="_blank" rel="noopener">Download CV</a>
     </div>
     <aside class="hero-side" aria-label="Profile portrait and affiliations">
-      <img class="portrait-card" src="assets/photo.jpg" alt="Portrait of Mingjun Wang" style="width:160px;height:224px;border-radius:8px;object-fit:contain;object-position:center top;" />
+      <img class="portrait-card" src="assets/photo.jpg?v=20260528c" alt="Portrait of Mingjun Wang" style="width:160px;height:224px;border-radius:8px;object-fit:contain;object-position:center top;" />
       <div class="affiliation-logos">
         <img src="assets/cuhk.png" alt="CUHK logo" />
         <img src="assets/ict.svg" alt="ICT CAS logo" />
@@ -58,8 +64,8 @@
   <section id="about" class="section container">
     <h2>About</h2>
     <div class="prose">
-      <p>I am currently a Ph.D. student in the Department of Computer Science and Engineering at The Chinese University of Hong Kong, advised by Prof. Bei Yu. My research lies at the intersection of electronic design automation and machine learning, especially AI for EDA, circuit representation learning, 3D IC design automation, and fault simulation.</p>
-      <p>My work studies how to represent circuits across RTL, netlists, physical layouts, timing, power, and verification signals. I am particularly interested in multi-modal circuit understanding, cross-stage knowledge distillation, early-stage prediction, and efficient simulation algorithms that remain useful under real design constraints.</p>
+      <p>I am currently a Ph.D. student in the Department of Computer Science and Engineering at The Chinese University of Hong Kong, advised by Prof. Bei Yu. My research centers on AI4EDA and 3D IC design automation, with a focus on circuit representation learning, multi-modal circuit datasets, and timing/power modeling across design stages.</p>
+      <p>My work studies how to represent circuits across RTL, netlists, physical layouts, timing, power, and verification signals. I am particularly interested in cross-stage knowledge distillation, task-oriented circuit data, early-stage 3D IC prediction, and learning systems that remain useful under real design constraints.</p>
       <p>Before joining CUHK, I received my master's degree in Electronic Information from the University of Chinese Academy of Sciences and the Institute of Computing Technology, Chinese Academy of Sciences, advised by Prof. Xiaowei Li at the State Key Laboratory of Processors. I received my bachelor's degree in Microelectronics Science and Technology from Peking University, and have industrial EDA experience with CASTEST on fault simulation and ISO 26262-oriented functional safety analysis.</p>
     </div>
   </section>
@@ -82,14 +88,14 @@
     <h2>Research Interests</h2>
     <div class="focus-grid">
       <article class="focus-card">
-        <div class="focus-icon">MM</div>
-        <h3>Multi-Modal Circuit Understanding</h3>
-        <p>Datasets, GNN/LLM methods, and unified circuit representations across specifications, RTL, netlists, layouts, timing, and power.</p>
+        <div class="focus-icon">AI</div>
+        <h3>AI4EDA and Circuit Representation Learning</h3>
+        <p>Multi-modal circuit datasets, task-oriented augmentation, GNN/LLM methods, and unified representations across specifications, RTL, netlists, layouts, timing, and power.</p>
       </article>
       <article class="focus-card">
-        <div class="focus-icon">TP</div>
-        <h3>Timing / Power and 3D IC Prediction</h3>
-        <p>Cross-stage knowledge distillation and early-stage prediction for timing, power, and 3D IC design automation.</p>
+        <div class="focus-icon">3D</div>
+        <h3>3D IC Timing / Power Prediction</h3>
+        <p>Cross-stage knowledge distillation and early-stage prediction for 3D IC design automation, including timing, power, and FIT-oriented modeling.</p>
       </article>
       <article class="focus-card">
         <div class="focus-icon">FS</div>
@@ -145,18 +151,6 @@
       </article>
 
       <article class="pub-card">
-        <div class="venue-block badge-icml">ICML</div>
-        <div class="pub-body">
-          <span class="venue badge-icml">ICML 2026</span><span class="type-badge conference">Conference</span><span class="award-badge">Co-first †</span>
-          <h3>AnalogVerifier: A Neuro-Symbolic Framework for Analog Circuit Verification</h3>
-          <p class="authors">Yanfang Liu†, <strong>Mingjun Wang†</strong>, Peng Xu, Rongliang Fu, Bei Yu, Tsung-Yi Ho.</p>
-          <p class="meta">Conference paper · International Conference on Machine Learning, 2026.</p>
-          <p class="desc">A neuro-symbolic verification framework for analog circuits.</p>
-          <div class="pub-links"><a href="https://www.cse.cuhk.edu.hk/~byu/publications.html" target="_blank" rel="noopener">CUHK Listing</a></div>
-        </div>
-      </article>
-
-      <article class="pub-card">
         <div class="venue-block badge-dac">DAC</div>
         <div class="pub-body">
           <span class="venue badge-dac">DAC 2026</span><span class="type-badge conference">Conference</span><span class="award-badge">Co-first †</span>
@@ -165,6 +159,18 @@
           <p class="meta">Conference paper · Design Automation Conference, 2026.</p>
           <p class="desc">A decoupled graph learning approach for accurate FIT prediction.</p>
           <div class="pub-links"><a href="https://63dac.conference-program.com/organization/?inst=1394923548994406178" target="_blank" rel="noopener">DAC Program</a></div>
+        </div>
+      </article>
+
+      <article class="pub-card">
+        <div class="venue-block badge-icml">ICML</div>
+        <div class="pub-body">
+          <span class="venue badge-icml">ICML 2026</span><span class="type-badge conference">Conference</span><span class="award-badge">Co-first †</span>
+          <h3>AnalogVerifier: A Neuro-Symbolic Framework for Analog Circuit Verification</h3>
+          <p class="authors">Yanfang Liu†, <strong>Mingjun Wang†</strong>, Peng Xu, Rongliang Fu, Bei Yu, Tsung-Yi Ho.</p>
+          <p class="meta">Conference paper · International Conference on Machine Learning, 2026.</p>
+          <p class="desc">A neuro-symbolic verification framework for analog circuits.</p>
+          <div class="pub-links"><a href="https://www.cse.cuhk.edu.hk/~byu/publications.html" target="_blank" rel="noopener">CUHK Listing</a></div>
         </div>
       </article>
 
@@ -205,17 +211,6 @@
       </article>
 
       <article class="pub-card">
-        <div class="venue-block badge-tcad">TCAD</div>
-        <div class="pub-body">
-          <span class="venue badge-tcad">IEEE TCAD 2025</span><span class="type-badge journal">Journal</span>
-          <h3>DomSim: Hardware-Aware Hybrid Fault Simulation Approach with Dominator Tree-guided Partitioning</h3>
-          <p class="authors"><strong>Mingjun Wang</strong>, Hui Wang, Feng Gu, Zizhen Liu, Jianan Mu, Shengwen Liang, Zhiqiang Yu, Zhen Liang, Jun Gao, Jiaping Tang, Jing Ye, Bei Yu, Xiaowei Li, Huawei Li.</p>
-          <p class="meta">Journal article · IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems, 2025.</p>
-          <p class="desc">A hardware-aware hybrid fault simulation approach using dominator tree-guided partitioning.</p>
-        </div>
-      </article>
-
-      <article class="pub-card">
         <div class="venue-block badge-iccad">ICCAD</div>
         <div class="pub-body">
           <span class="venue badge-iccad">ICCAD 2025</span><span class="type-badge conference">Conference</span><span class="award-badge">Co-first †</span>
@@ -224,6 +219,17 @@
           <p class="meta">Conference paper · International Conference on Computer-Aided Design, 2025.</p>
           <p class="desc">Decoupled multi-modality learning for vector-based dynamic power estimation.</p>
           <div class="pub-links"><a href="https://doi.org/10.1109/ICCAD66269.2025.11240833" target="_blank" rel="noopener">DOI</a></div>
+        </div>
+      </article>
+
+      <article class="pub-card">
+        <div class="venue-block badge-tcad">TCAD</div>
+        <div class="pub-body">
+          <span class="venue badge-tcad">IEEE TCAD 2025</span><span class="type-badge journal">Journal</span>
+          <h3>DomSim: Hardware-Aware Hybrid Fault Simulation Approach with Dominator Tree-guided Partitioning</h3>
+          <p class="authors"><strong>Mingjun Wang</strong>, Hui Wang, Feng Gu, Zizhen Liu, Jianan Mu, Shengwen Liang, Zhiqiang Yu, Zhen Liang, Jun Gao, Jiaping Tang, Jing Ye, Bei Yu, Xiaowei Li, Huawei Li.</p>
+          <p class="meta">Journal article · IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems, 2025.</p>
+          <p class="desc">A hardware-aware hybrid fault simulation approach using dominator tree-guided partitioning.</p>
         </div>
       </article>
 

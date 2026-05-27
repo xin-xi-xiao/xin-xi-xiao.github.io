@@ -45,3 +45,4 @@ Mingjun Wang's homepage should combine Bei Yu's rigorous academic organization w
 - Awards are ordered by year and then by public research/competition signal before scholarships. The duplicate EDA2/EDA² 2023 award from the CV is represented once.
 - Each publication card explicitly marks whether the entry is a journal article or a conference paper, because the selected list mixes TCAD journal papers with conference papers.
 - The CSS file is versioned in the generated HTML to avoid old GitHub Pages/browser caches preserving the previous circular portrait rule.
+- The hero, research cards, and publication ordering now foreground AI4EDA and 3D IC design automation as the primary research identity, with fault simulation retained as a strong verification background.

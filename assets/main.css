@@ -142,6 +142,23 @@ h3 {
   font-weight: 700;
 }
 
+.hero-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 14px;
+}
+
+.hero-pills span {
+  padding: 4px 10px;
+  border: 1px solid rgba(31, 58, 147, 0.18);
+  border-radius: 999px;
+  background: #F8FAFC;
+  color: var(--c-primary);
+  font-size: var(--fs-meta);
+  font-weight: 700;
+}
+
 .hero-bio {
   max-width: 650px;
   margin: 0 0 14px;
@@ -250,6 +267,11 @@ h3 {
   border: 1px solid var(--c-border);
   border-radius: var(--radius-card);
   background: var(--c-bg-soft);
+}
+
+.focus-card:nth-child(-n+2) {
+  border-color: rgba(31, 58, 147, 0.22);
+  background: linear-gradient(180deg, #FFFFFF 0%, #F8FAFC 100%);
 }
 
 .focus-icon {
