@@ -1,0 +1,39 @@
+# Design Analysis
+
+This note records the reference-page analysis used to redesign Mingjun Wang's academic homepage.
+
+## Bei Yu Homepage
+
+| Design Element | Observation |
+|---|---|
+| Navigation | Traditional jemdoc side navigation, organized by identity and research categories. Links are compact, text-first, and highly scannable. |
+| Hero layout | Photo and profile text are placed side by side in a table-like layout. The profile block prioritizes title, department, university, degrees, social links, and CV. |
+| Section titles | Blue academic headings with simple horizontal separation. The visual system is restrained and information-driven. |
+| About text | Dense academic prose with many contextual links. Paragraphs use a readable line height and compact spacing. |
+| News / updates | The site favors dated, factual update lists. Content is precise, chronological, and easy to skim. |
+| Awards / records | Information is best represented as compact tabular or list structures rather than decorative cards. |
+| Color palette | Navy/blue links and headings, black text, white background, light gray separators. |
+| Typography | Jemdoc-style academic typography, with compact body text and restrained headings. |
+
+## Yao Lai Homepage
+
+| Design Element | Observation |
+|---|---|
+| Navigation | Minimal sticky top navigation with a very small set of links. It uses subtle shadow/border and modern spacing. |
+| Hero layout | A modern card-like profile area with text on the left and image on the right. Affiliation logo and CV/contact links are prominent but not oversized. |
+| Education / honors | Uses compact rows with institution logos, degree text, and right-aligned dates. |
+| Publication cards | Publications are card-based, with a left thumbnail/venue block and a right content area containing venue badge, title, authors, status badges, description, and links. |
+| Typography | Modern sans-serif, body around 15-16px, compact headings around 18-20px, strong use of metadata styling. |
+| Whitespace | Card spacing and section spacing create breathing room without wasting the page. |
+| Color palette | Clean white background, deep blue links, small colorful venue badges, light gray borders. |
+
+## Fusion Strategy
+
+Mingjun Wang's homepage should combine Bei Yu's rigorous academic organization with Yao Lai's modern visual hierarchy. The redesign therefore uses:
+
+- A compact sticky top navigation.
+- A profile header with circular portrait, affiliation logos, CV and scholar links.
+- Bei Yu-style chronological News and awards table.
+- Yao Lai-style education rows and publication cards.
+- A narrow 960px container, 15px body text, and 22px section headings.
+- No decorative numbering, no oversized typography, and no patent or under-review content.

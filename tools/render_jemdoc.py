@@ -23,7 +23,12 @@ def inline_markup(text: str) -> str:
 
 def render(source: Path) -> str:
     title = "Mingjun Wang"
-    css_files = ["assets/css/site.css"]
+    description = (
+        "Mingjun Wang is a Ph.D. student in Computer Science and Engineering "
+        "at The Chinese University of Hong Kong, working on AI for EDA, "
+        "circuit representation learning, 3D IC design, and fault simulation."
+    )
+    css_files: list[str] = []
     body: list[str] = []
     paragraph: list[str] = []
     in_raw = False
@@ -104,6 +109,10 @@ def render(source: Path) -> str:
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="{html.escape(description)}" />
+  <meta property="og:title" content="{html.escape(title)}" />
+  <meta property="og:description" content="{html.escape(description)}" />
+  <meta property="og:type" content="website" />
   <meta name="generator" content="jemdoc-style renderer" />
   <title>{html.escape(title)}</title>
 {css_tags}

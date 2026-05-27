@@ -1,6 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" role="img" aria-label="Fault simulation icon">
-  <rect x="18" y="18" width="44" height="44" rx="6" fill="#f6f1e7" stroke="#1e3a4c" stroke-width="3"/>
-  <path d="M27 34h26M27 46h26M34 27v26M46 27v26" stroke="#1e3a4c" stroke-width="3" stroke-linecap="round"/>
-  <path d="M24 18v-8M40 18v-8M56 18v-8M24 70v-8M40 70v-8M56 70v-8M10 24h8M10 40h8M10 56h8M62 24h8M62 40h8M62 56h8" stroke="#c9a227" stroke-width="3" stroke-linecap="round"/>
-  <circle cx="48" cy="32" r="5" fill="#b4463a"/>
-</svg>
