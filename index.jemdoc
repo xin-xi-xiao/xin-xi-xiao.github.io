@@ -36,6 +36,24 @@
         <a class="button" href="https://github.com/xin-xi-xiao">GitHub</a>
         <a class="button" href="#publications">Selected Work</a>
       </div>
+      <div class="institution-row" aria-label="Affiliations">
+        <a href="https://www.cuhk.edu.hk/english/">
+          <img src="assets/img/logo-cuhk.jpg" alt="CUHK logo" />
+          <span>CUHK CSE</span>
+        </a>
+        <a href="https://english.ict.cas.cn/">
+          <img src="assets/img/logo-ict.png" alt="ICT CAS logo" />
+          <span>ICT, CAS</span>
+        </a>
+        <a href="https://english.ucas.ac.cn/">
+          <span class="text-logo">UCAS</span>
+          <span>UCAS</span>
+        </a>
+        <a href="https://english.pku.edu.cn/">
+          <img src="assets/img/logo-pku.jpg" alt="Peking University logo" />
+          <span>PKU</span>
+        </a>
+      </div>
       <div class="hero-metrics" aria-label="Profile metrics">
         <div><strong>CUHK CSE</strong><span>Ph.D. student</span></div>
         <div><strong>ICML Spotlight</strong><span>RTLDistil 2025</span></div>

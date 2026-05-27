@@ -712,3 +712,278 @@ h3 {
     font-size: 3.2rem;
   }
 }
+
+/* Academic compact redesign overrides. */
+body {
+  font-size: 15.5px;
+  line-height: 1.58;
+}
+
+.nav,
+.hero,
+.section,
+.signal-strip,
+.footer {
+  width: min(1040px, calc(100% - 36px));
+}
+
+.nav {
+  min-height: 60px;
+}
+
+.brand img {
+  width: 34px;
+  height: 34px;
+}
+
+.nav-links {
+  gap: 18px;
+  font-size: 0.88rem;
+}
+
+.hero {
+  min-height: 0;
+  padding: 44px 0 32px;
+  grid-template-columns: minmax(0, 1fr) 275px;
+  align-items: start;
+  gap: 42px;
+}
+
+.hero::before {
+  inset: 60px 0 auto 0;
+  height: 360px;
+}
+
+.eyebrow,
+.section-kicker {
+  font-size: 0.72rem;
+}
+
+h1 {
+  font-size: clamp(2.35rem, 5vw, 3.45rem);
+}
+
+h2 {
+  font-size: clamp(1.45rem, 2.6vw, 2.15rem);
+}
+
+h3 {
+  font-size: 1rem;
+}
+
+.tagline {
+  max-width: 700px;
+  margin: 14px 0 14px;
+  font-size: clamp(1.08rem, 2.1vw, 1.38rem);
+  line-height: 1.32;
+}
+
+.bio-lead,
+.rich-text p,
+.personality p {
+  font-size: 0.96rem;
+}
+
+.button,
+.pub-links a,
+.contact-links a {
+  min-height: 38px;
+  padding: 8px 13px;
+  font-size: 0.86rem;
+}
+
+.institution-row {
+  max-width: 720px;
+  margin-top: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.institution-row a {
+  min-height: 40px;
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 6px 10px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.82);
+  color: var(--blue);
+  font-size: 0.82rem;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.institution-row img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+.text-logo {
+  width: 30px;
+  height: 26px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  background: var(--blue);
+  color: var(--white);
+  font-size: 0.68rem;
+  letter-spacing: 0.04em;
+}
+
+.hero-metrics {
+  max-width: 720px;
+  margin-top: 18px;
+}
+
+.hero-metrics div {
+  min-height: 78px;
+  padding: 13px;
+}
+
+.motto {
+  margin-top: 18px;
+  font-size: 0.93rem;
+}
+
+.portrait-wrap img {
+  aspect-ratio: 4 / 5.25;
+}
+
+.affiliation-card {
+  margin: -34px 18px 0;
+  padding: 14px 16px;
+}
+
+.signal-strip {
+  margin-bottom: 24px;
+  padding: 13px 0;
+}
+
+.section {
+  padding: 46px 0;
+}
+
+.section.compact {
+  padding: 34px 0;
+}
+
+.two-col {
+  gap: 46px;
+}
+
+.section-heading {
+  margin-bottom: 22px;
+}
+
+.design-dna {
+  gap: 14px;
+}
+
+.dna-item {
+  min-height: 156px;
+  padding: 18px;
+}
+
+.dna-item span {
+  margin-bottom: 18px;
+}
+
+.focus-grid,
+.project-grid {
+  gap: 14px;
+}
+
+.focus-card {
+  min-height: 198px;
+  padding: 19px;
+}
+
+.focus-card img {
+  width: 46px;
+  height: 46px;
+  margin-bottom: 14px;
+}
+
+.timeline div {
+  grid-template-columns: 72px 1fr;
+  gap: 18px;
+  padding: 5px 0 16px 20px;
+}
+
+.pub-list,
+.cards {
+  gap: 11px;
+}
+
+.pub {
+  padding: 15px 17px;
+}
+
+.pub p {
+  margin: 7px 0 0;
+  font-size: 0.94rem;
+}
+
+.venue {
+  font-size: 0.72rem;
+}
+
+.pub-links {
+  margin-top: 10px;
+}
+
+.info-card,
+.project-card {
+  padding: 17px 18px;
+}
+
+.project-card {
+  min-height: 164px;
+}
+
+.award-grid {
+  gap: 11px;
+}
+
+.award-grid article {
+  min-height: 102px;
+  padding: 14px;
+}
+
+.personality,
+.collaboration-band {
+  padding: 30px;
+}
+
+@media (max-width: 880px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .portrait-panel {
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 560px) {
+  .hero,
+  .section,
+  .signal-strip,
+  .footer,
+  .nav {
+    width: min(100% - 28px, 1040px);
+  }
+
+  h1 {
+    font-size: 2.45rem;
+  }
+
+  .nav {
+    min-height: auto;
+  }
+}

@@ -31,3 +31,4 @@ The homepage includes accepted or publicly verifiable work only. Patent items an
 - PMLR / OpenReview for ICML 2025 RTLDistil
 - DBLP and conference/program records for ITC-Asia 2024, ICCAD 2024, ASP-DAC 2025, ISEDA 2025, DAC 2025, ICCAD 2025, ASP-DAC 2026, DAC 2026, and ICML 2026
 - CUHK research portal and Prof. Bei Yu's publication pages
+- CUHK, ICT CAS, and PKU official pages for small affiliation logos used in the homepage header
