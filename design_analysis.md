@@ -32,8 +32,14 @@ This note records the reference-page analysis used to redesign Mingjun Wang's ac
 Mingjun Wang's homepage should combine Bei Yu's rigorous academic organization with Yao Lai's modern visual hierarchy. The redesign therefore uses:
 
 - A compact sticky top navigation.
-- A profile header with circular portrait, affiliation logos, CV and scholar links.
+- A profile header with a compact rounded-rectangle portrait, affiliation logos, CV and scholar links.
 - Bei Yu-style chronological News and awards table.
 - Yao Lai-style education rows and publication cards.
 - A narrow 960px container, 15px body text, and 22px section headings.
 - No decorative numbering, no oversized typography, and no patent or under-review content.
+
+## Second-Pass Refinement
+
+- The profile image is displayed as a rounded-rectangle portrait rather than a circular crop. The supplied certificate-style photo is already tightly framed, so a circle enlarges the face too much and removes useful context.
+- Publications are ordered by year first, then by author contribution and relevance to the research narrative. First-author and co-first AI4EDA papers lead the 2026 group, while the IEEE TCAD Early Access paper remains clearly visible in the same year group.
+- Awards are ordered by year and then by public research/competition signal before scholarships. The duplicate EDA2/EDA² 2023 award from the CV is represented once.

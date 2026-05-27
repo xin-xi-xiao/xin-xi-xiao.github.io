@@ -180,14 +180,16 @@ h3 {
 }
 
 .portrait {
-  width: 180px;
-  height: 180px;
+  width: 170px;
+  height: 238px;
   display: block;
   margin: 0 auto 14px;
   border: 1px solid var(--c-border);
-  border-radius: 50%;
-  object-fit: cover;
-  object-position: center 16%;
+  border-radius: var(--radius-card);
+  background: #fff;
+  object-fit: contain;
+  object-position: center top;
+  box-shadow: 0 8px 24px rgba(31, 41, 55, 0.08);
 }
 
 .affiliation-logos {
@@ -500,6 +502,11 @@ h3 {
 
   .hero-side {
     order: -1;
+  }
+
+  .portrait {
+    width: 150px;
+    height: 210px;
   }
 
   .hero-bio {

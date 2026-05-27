@@ -120,20 +120,8 @@
 
   <section id="publications" class="section container">
     <h2>Selected Publications</h2>
-    <p class="equal-note">† Equal contribution. This page lists accepted and publicly available research outputs only.</p>
+    <p class="equal-note">† Equal contribution. Publications are ordered by year, then by author contribution and venue relevance to my current research agenda.</p>
     <div class="pub-list">
-      <article class="pub-card">
-        <div class="venue-block badge-tcad">TCAD</div>
-        <div class="pub-body">
-          <span class="venue badge-tcad">IEEE TCAD Early Access</span>
-          <h3>Bit-Compressed Concurrent Fault Simulation with Efficient Fault List</h3>
-          <p class="authors">Feng Gu, Zhiteng Chao, Hui Wang, Jianan Mu, <strong>Mingjun Wang</strong>, Jun Gao, Yonghao Wang, Jing Ye, Xiaowei Li, Huawei Li.</p>
-          <p class="meta">IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems, Early Access, 2026.</p>
-          <p class="desc">A bit-compressed concurrent fault simulation method with efficient fault-list organization for design-for-test workflows.</p>
-          <div class="pub-links"><a href="https://ieeexplore.ieee.org/document/11523085" target="_blank" rel="noopener">IEEE Xplore</a></div>
-        </div>
-      </article>
-
       <article class="pub-card">
         <div class="venue-block badge-iclr">ICLR</div>
         <div class="pub-body">
@@ -167,6 +155,18 @@
           <p class="meta">Design Automation Conference, 2026.</p>
           <p class="desc">A decoupled graph learning approach for accurate FIT prediction.</p>
           <div class="pub-links"><a href="https://63dac.conference-program.com/organization/?inst=1394923548994406178" target="_blank" rel="noopener">DAC Program</a></div>
+        </div>
+      </article>
+
+      <article class="pub-card">
+        <div class="venue-block badge-tcad">TCAD</div>
+        <div class="pub-body">
+          <span class="venue badge-tcad">IEEE TCAD Early Access</span>
+          <h3>Bit-Compressed Concurrent Fault Simulation with Efficient Fault List</h3>
+          <p class="authors">Feng Gu, Zhiteng Chao, Hui Wang, Jianan Mu, <strong>Mingjun Wang</strong>, Jun Gao, Yonghao Wang, Jing Ye, Xiaowei Li, Huawei Li.</p>
+          <p class="meta">IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems, Early Access, 2026.</p>
+          <p class="desc">A bit-compressed concurrent fault simulation method with efficient fault-list organization for design-for-test workflows.</p>
+          <div class="pub-links"><a href="https://ieeexplore.ieee.org/document/11523085" target="_blank" rel="noopener">IEEE Xplore</a></div>
         </div>
       </article>
 
@@ -295,7 +295,7 @@
     <h2>Research Experience</h2>
     <div class="experience-list">
       <article>
-        <div class="time">Jul. 2023 — Present</div>
+        <div class="time">Jul. 2023 — Mar. 2025</div>
         <h3>Fault Simulation Research · State Key Laboratory of Processors, ICT, CAS</h3>
         <ul><li>Developed hardware-aware and parallel fault simulation frameworks.</li><li>Studied optimization techniques for scalable circuit verification and testing.</li></ul>
       </article>
@@ -305,7 +305,7 @@
         <ul><li>Built multi-modal circuit datasets incorporating netlist, RTL, and specification data.</li><li>Developed models for circuit functionality prediction and PPA estimation.</li></ul>
       </article>
       <article>
-        <div class="time">Sep. 2021 — Present</div>
+        <div class="time">Sep. 2021 — Jan. 2025</div>
         <h3>Industrial Experience · CASTEST</h3>
         <ul><li>Contributed to digital circuit fault simulation platforms and functional safety analysis tools.</li><li>Worked on ISO 26262-oriented workflows for automotive-grade chips.</li></ul>
       </article>
@@ -322,16 +322,16 @@
     <table class="award-table">
       <thead><tr><th>Award</th><th>Venue / Organization</th><th>Year</th></tr></thead>
       <tbody>
-        <tr><td>International Exchange Scholarship for Empowerment</td><td>ICT, CAS</td><td>2025</td></tr>
         <tr><td>Winner — IEEE ICLAD-DAC GenAI Hackathon</td><td>IEEE</td><td>2025</td></tr>
         <tr><td>2nd Place — EDAthon Programming Competition</td><td>IEEE CEDA</td><td>2025</td></tr>
         <tr><td>2nd Prize (Enterprise Track) — IC Innovation Contest</td><td>8th China Graduate IC Innovation Contest</td><td>2025</td></tr>
+        <tr><td>International Exchange Scholarship for Empowerment</td><td>ICT, CAS</td><td>2025</td></tr>
         <tr><td>Director's Special Award (1st / 400)</td><td>ICT, CAS</td><td>2024</td></tr>
         <tr><td>National Scholarship (Top 2%)</td><td>MoE, China</td><td>2024</td></tr>
+        <tr><td>Special Prize — LLM4EDA Hackathon (1st / 100)</td><td>National Key Laboratory of Integrated Chips and Systems</td><td>2024</td></tr>
         <tr><td>Academic Endeavor Award</td><td>EDA Elite Challenge</td><td>2024</td></tr>
         <tr><td>1st Prize Academic Scholarship (Top 15%)</td><td>Chinese Academy of Sciences</td><td>2024</td></tr>
-        <tr><td>Special Prize — LLM4EDA Hackathon (1st / 100)</td><td>National Key Laboratory of Integrated Chips and Systems</td><td>2024</td></tr>
-        <tr><td>1st Prize — EDA2 Integrated Circuit Elite Challenge (1st / 230 teams)</td><td>Huawei HiSilicon</td><td>2023</td></tr>
+        <tr><td>1st Prize — EDA² Integrated Circuit Elite Challenge (1st / 230 teams)</td><td>Huawei HiSilicon</td><td>2023</td></tr>
         <tr><td>Huawei Intelligent Base Scholarship (Top 5%)</td><td>Huawei</td><td>2023</td></tr>
         <tr><td>Cambricon Outstanding Student Award (10 / 300)</td><td>Cambricon</td><td>2023</td></tr>
         <tr><td>Outstanding Volunteer — Beijing 2022 Winter Olympics</td><td>Peking University</td><td>2022</td></tr>
