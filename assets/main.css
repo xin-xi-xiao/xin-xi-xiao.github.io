@@ -197,8 +197,8 @@ h3 {
 }
 
 .portrait-card {
-  width: 160px;
-  height: 224px;
+  width: 140px;
+  height: 196px;
   display: block;
   margin: 0 auto 14px;
   border: 1px solid var(--c-border);
@@ -545,8 +545,8 @@ h3 {
   }
 
   .portrait-card {
-    width: 142px;
-    height: 199px;
+    width: 128px;
+    height: 179px;
   }
 
   .hero-bio {

@@ -1,5 +1,5 @@
 # jemdoc: addtitle{Mingjun Wang}
-# jemdoc: addcss{assets/main.css?v=20260528c}
+# jemdoc: addcss{assets/main.css?v=20260528d}
 
 ~~~html
 <header class="topbar">
@@ -21,15 +21,15 @@
     <div class="hero-main">
       <h1>Mingjun Wang</h1>
       <p class="subtitle">Ph.D. Student · Department of Computer Science and Engineering · The Chinese University of Hong Kong</p>
-      <p class="tagline">AI4EDA · 3D IC Design Automation · Circuit Representation Learning · Timing / Power Prediction</p>
+      <p class="tagline">AI4EDA · 3D IC Design Automation · Circuit Representation Learning · Fault Simulation</p>
       <div class="hero-pills" aria-label="Primary research areas">
         <span>AI4EDA</span>
         <span>3D IC</span>
-        <span>Timing / Power</span>
-        <span>Circuit Data</span>
+        <span>Circuit Representation</span>
+        <span>Fault Simulation</span>
       </div>
       <p class="hero-bio">
-        I am a Ph.D. student in Computer Science and Engineering at The Chinese University of Hong Kong, advised by Prof. Bei Yu. My research primarily focuses on AI4EDA and 3D IC design automation, especially multi-modal circuit understanding, cross-stage timing and power prediction, circuit representation learning, and scalable verification.
+        I am a Ph.D. student in Computer Science and Engineering at The Chinese University of Hong Kong, advised by Prof. Bei Yu. My research primarily focuses on AI4EDA and 3D IC design automation, especially multi-modal circuit understanding, circuit representation learning, cross-stage timing/power prediction, and scalable fault simulation.
       </p>
       <div class="link-row">
         <a href="mailto:1155251294@link.cuhk.edu.hk">Email</a>
@@ -40,7 +40,7 @@
       <a class="primary-button" href="assets/cv.pdf" target="_blank" rel="noopener">Download CV</a>
     </div>
     <aside class="hero-side" aria-label="Profile portrait and affiliations">
-      <img class="portrait-card" src="assets/photo.jpg?v=20260528c" alt="Portrait of Mingjun Wang" style="width:160px;height:224px;border-radius:8px;object-fit:contain;object-position:center top;" />
+      <img class="portrait-card" src="assets/photo.jpg?v=20260528d" alt="Portrait of Mingjun Wang" style="width:140px;height:196px;border-radius:8px;object-fit:contain;object-position:center top;" />
       <div class="affiliation-logos">
         <img src="assets/cuhk.png" alt="CUHK logo" />
         <img src="assets/ict.svg" alt="ICT CAS logo" />
@@ -55,7 +55,7 @@
     <h2>About</h2>
     <div class="prose">
       <p>I am currently a Ph.D. student in the Department of Computer Science and Engineering at The Chinese University of Hong Kong, advised by Prof. Bei Yu. My research centers on AI4EDA and 3D IC design automation, with a focus on circuit representation learning, multi-modal circuit datasets, and timing/power modeling across design stages.</p>
-      <p>My work studies how to represent circuits across RTL, netlists, physical layouts, timing, power, and verification signals. I am particularly interested in cross-stage knowledge distillation, task-oriented circuit data, early-stage 3D IC prediction, and learning systems that remain useful under real design constraints.</p>
+      <p>My work studies how to represent circuits across RTL, netlists, physical layouts, timing, power, and verification signals. I am particularly interested in cross-stage knowledge distillation, task-oriented circuit data, early-stage 3D IC prediction, and fault simulation methods that remain useful under real design constraints.</p>
       <p>Before joining CUHK, I received my master's degree in Electronic Information from the University of Chinese Academy of Sciences and the Institute of Computing Technology, Chinese Academy of Sciences, advised by Prof. Xiaowei Li at the State Key Laboratory of Processors. I received my bachelor's degree in Microelectronics Science and Technology from Peking University, and have industrial EDA experience with CASTEST on fault simulation and ISO 26262-oriented functional safety analysis.</p>
     </div>
   </section>
@@ -84,8 +84,8 @@
       </article>
       <article class="focus-card">
         <div class="focus-icon">3D</div>
-        <h3>3D IC Timing / Power Prediction</h3>
-        <p>Cross-stage knowledge distillation and early-stage prediction for 3D IC design automation, including timing, power, and FIT-oriented modeling.</p>
+        <h3>3D IC Design Automation</h3>
+        <p>Cross-stage knowledge distillation and early-stage prediction for 3D IC design, including timing, power, and FIT-oriented modeling.</p>
       </article>
       <article class="focus-card">
         <div class="focus-icon">FS</div>
@@ -365,7 +365,7 @@
 
   <section id="contact" class="section container contact">
     <h2>Collaboration &amp; Contact</h2>
-    <blockquote>I welcome collaborations on AI4EDA, 3D IC design automation, circuit representation learning, timing/power modeling, and hardware verification. Feel free to reach out.</blockquote>
+    <blockquote>I welcome collaborations on AI4EDA, 3D IC design automation, circuit representation learning, timing/power modeling, fault simulation, and hardware verification. Feel free to reach out.</blockquote>
     <p>Email: <a href="mailto:1155251294@link.cuhk.edu.hk">1155251294@link.cuhk.edu.hk</a> · <a href="mailto:wangmingjun000613@gmail.com">wangmingjun000613@gmail.com</a></p>
     <p>CUHK · Department of Computer Science and Engineering · Advisor: <a href="https://www.cse.cuhk.edu.hk/~byu/" target="_blank" rel="noopener">Prof. Bei Yu</a></p>
     <p><a href="https://scholar.google.com/citations?user=E9aUbvAAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a> · <a href="https://github.com/xin-xi-xiao" target="_blank" rel="noopener">GitHub</a> · <a href="assets/cv.pdf" target="_blank" rel="noopener">CV</a></p>
