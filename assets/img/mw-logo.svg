@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-labelledby="title desc">
+  <title id="title">Mingjun Wang logo</title>
+  <desc id="desc">A monogram logo with circuit traces.</desc>
+  <rect width="96" height="96" rx="18" fill="#101820"/>
+  <path d="M18 64V28h8l14 22 14-22h8v36h-9V43L42 60h-4L27 43v21z" fill="#f6f1e7"/>
+  <path d="M66 31h12v8H66zM66 45h12v8H66zM66 59h12v8H66z" fill="#c9a227"/>
+  <path d="M62 35h-9M62 49h-7M62 63h-9" stroke="#c9a227" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="80" cy="35" r="3" fill="#f6f1e7"/>
+  <circle cx="80" cy="49" r="3" fill="#f6f1e7"/>
+  <circle cx="80" cy="63" r="3" fill="#f6f1e7"/>
+</svg>

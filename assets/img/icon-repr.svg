@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" role="img" aria-label="Representation learning icon">
+  <circle cx="22" cy="24" r="8" fill="#1e3a4c"/>
+  <circle cx="58" cy="24" r="8" fill="#c9a227"/>
+  <circle cx="40" cy="56" r="9" fill="#b4463a"/>
+  <path d="M29 27l20 23M51 28L43 48M28 24h22" stroke="#1e3a4c" stroke-width="3" stroke-linecap="round" opacity=".75"/>
+  <rect x="11" y="12" width="58" height="56" rx="14" fill="none" stroke="#d8d2c4" stroke-width="3"/>
+</svg>

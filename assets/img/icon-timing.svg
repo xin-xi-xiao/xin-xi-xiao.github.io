@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" role="img" aria-label="Timing icon">
+  <rect x="10" y="16" width="60" height="48" rx="8" fill="#f6f1e7" stroke="#1e3a4c" stroke-width="3"/>
+  <path d="M18 50h8V30h8v20h8V36h8v14h12" fill="none" stroke="#c9a227" stroke-width="4" stroke-linejoin="round"/>
+  <circle cx="24" cy="30" r="4" fill="#1e3a4c"/>
+  <circle cx="48" cy="36" r="4" fill="#1e3a4c"/>
+</svg>
