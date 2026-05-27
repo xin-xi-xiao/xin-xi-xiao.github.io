@@ -32,7 +32,7 @@ This note records the reference-page analysis used to redesign Mingjun Wang's ac
 Mingjun Wang's homepage should combine Bei Yu's rigorous academic organization with Yao Lai's modern visual hierarchy. The redesign therefore uses:
 
 - A compact sticky top navigation.
-- A profile header with a compact rounded-rectangle portrait, affiliation logos, CV and scholar links.
+- A profile header with a compact rounded-rectangle portrait, visually balanced affiliation-logo frames, CV and scholar links.
 - Bei Yu-style chronological News and awards table.
 - Yao Lai-style education rows and publication cards.
 - A narrow 960px container, 15px body text, and 22px section headings.
@@ -45,4 +45,4 @@ Mingjun Wang's homepage should combine Bei Yu's rigorous academic organization w
 - Awards are ordered by year and then by public research/competition signal before scholarships. The duplicate EDA2/EDA² 2023 award from the CV is represented once.
 - Each publication card explicitly marks whether the entry is a journal article or a conference paper, because the selected list mixes TCAD journal papers with conference papers.
 - The CSS file is versioned in the generated HTML to avoid old GitHub Pages/browser caches preserving the previous circular portrait rule.
-- The hero, research cards, and publication ordering now foreground AI4EDA and 3D IC design automation as the primary research identity, while keeping circuit representation learning and fault simulation as explicit, visible research themes.
+- The hero, research cards, publication ordering, and research-experience order now foreground AI4EDA and 3D IC design automation as the primary research identity. Industrial-grade 3D IC EDA design flow is included as a recurring but not overbearing theme, while circuit representation learning and fault simulation remain explicit, visible research threads.

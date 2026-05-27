@@ -197,16 +197,17 @@ h3 {
 }
 
 .portrait-card {
-  width: 140px;
-  height: 196px;
+  width: 132px;
+  height: 185px;
   display: block;
-  margin: 0 auto 14px;
+  margin: 0 auto 12px;
   border: 1px solid var(--c-border);
   border-radius: var(--radius-card) !important;
   background: #fff;
   object-fit: contain;
   object-position: center top;
   box-shadow: 0 8px 24px rgba(31, 41, 55, 0.08);
+  overflow: hidden;
   clip-path: inset(0 round 8px);
 }
 
@@ -214,18 +215,24 @@ h3 {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 12px;
-  margin-bottom: 8px;
+  gap: 10px;
+  margin-bottom: 10px;
 }
 
-.affiliation-logos img {
-  width: 34px;
-  height: 34px;
+.logo-frame {
+  width: 42px;
+  height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-frame img {
+  width: auto;
+  height: auto;
+  max-width: 34px;
+  max-height: 34px;
   object-fit: contain;
-}
-
-.affiliation-logos img:nth-child(2) {
-  width: 58px;
 }
 
 .quote {
@@ -315,10 +322,6 @@ h3 {
   width: 34px;
   height: 34px;
   object-fit: contain;
-}
-
-.edu-item:nth-child(2) img {
-  width: 42px;
 }
 
 .edu-head {
@@ -545,8 +548,8 @@ h3 {
   }
 
   .portrait-card {
-    width: 128px;
-    height: 179px;
+    width: 120px;
+    height: 168px;
   }
 
   .hero-bio {

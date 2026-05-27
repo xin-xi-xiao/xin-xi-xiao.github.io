@@ -1,5 +1,5 @@
 # jemdoc: addtitle{Mingjun Wang}
-# jemdoc: addcss{assets/main.css?v=20260528d}
+# jemdoc: addcss{assets/main.css?v=20260528e}
 
 ~~~html
 <header class="topbar">
@@ -29,22 +29,22 @@
         <span>Fault Simulation</span>
       </div>
       <p class="hero-bio">
-        I am a Ph.D. student in Computer Science and Engineering at The Chinese University of Hong Kong, advised by Prof. Bei Yu. My research primarily focuses on AI4EDA and 3D IC design automation, especially multi-modal circuit understanding, circuit representation learning, cross-stage timing/power prediction, and scalable fault simulation.
+        I am a Ph.D. student in Computer Science and Engineering at The Chinese University of Hong Kong, advised by Prof. Bei Yu. My research primarily focuses on AI4EDA and 3D IC design automation, especially multi-modal circuit understanding, circuit representation learning, flow-oriented timing/power prediction, and scalable fault simulation.
       </p>
       <div class="link-row">
         <a href="mailto:1155251294@link.cuhk.edu.hk">Email</a>
-        <a href="assets/cv.pdf" target="_blank" rel="noopener">CV</a>
+        <a href="assets/cv.pdf" target="_blank" rel="noopener" title="CV upload slot: place the latest PDF at assets/cv.pdf">CV</a>
         <a href="https://scholar.google.com/citations?user=E9aUbvAAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a>
         <a href="https://github.com/xin-xi-xiao" target="_blank" rel="noopener">GitHub</a>
       </div>
-      <a class="primary-button" href="assets/cv.pdf" target="_blank" rel="noopener">Download CV</a>
+      <a class="primary-button" href="assets/cv.pdf" target="_blank" rel="noopener" title="CV upload slot: place the latest PDF at assets/cv.pdf">Download CV</a>
     </div>
     <aside class="hero-side" aria-label="Profile portrait and affiliations">
-      <img class="portrait-card" src="assets/photo.jpg?v=20260528d" alt="Portrait of Mingjun Wang" style="width:140px;height:196px;border-radius:8px;object-fit:contain;object-position:center top;" />
+      <img class="portrait-card" src="assets/photo.jpg?v=20260528e" alt="Portrait of Mingjun Wang" style="width:132px;height:185px;border-radius:8px;object-fit:contain;object-position:center top;" />
       <div class="affiliation-logos">
-        <img src="assets/cuhk.png" alt="CUHK logo" />
-        <img src="assets/ict.svg" alt="ICT CAS logo" />
-        <img src="assets/pku.png" alt="Peking University logo" />
+        <span class="logo-frame"><img src="assets/cuhk.png" alt="CUHK logo" /></span>
+        <span class="logo-frame"><img src="assets/ict.svg" alt="ICT CAS logo" /></span>
+        <span class="logo-frame"><img src="assets/pku.png" alt="Peking University logo" /></span>
       </div>
       <p>CUHK · ICT, CAS · PKU</p>
       <p class="quote">Careful research, practical systems, useful tools.</p>
@@ -55,8 +55,8 @@
     <h2>About</h2>
     <div class="prose">
       <p>I am currently a Ph.D. student in the Department of Computer Science and Engineering at The Chinese University of Hong Kong, advised by Prof. Bei Yu. My research centers on AI4EDA and 3D IC design automation, with a focus on circuit representation learning, multi-modal circuit datasets, and timing/power modeling across design stages.</p>
-      <p>My work studies how to represent circuits across RTL, netlists, physical layouts, timing, power, and verification signals. I am particularly interested in cross-stage knowledge distillation, task-oriented circuit data, early-stage 3D IC prediction, and fault simulation methods that remain useful under real design constraints.</p>
-      <p>Before joining CUHK, I received my master's degree in Electronic Information from the University of Chinese Academy of Sciences and the Institute of Computing Technology, Chinese Academy of Sciences, advised by Prof. Xiaowei Li at the State Key Laboratory of Processors. I received my bachelor's degree in Microelectronics Science and Technology from Peking University, and have industrial EDA experience with CASTEST on fault simulation and ISO 26262-oriented functional safety analysis.</p>
+      <p>My work studies how to represent circuits across RTL, netlists, physical layouts, timing, power, and verification signals. I am particularly interested in cross-stage knowledge distillation, task-oriented circuit data, industrial-grade 3D IC EDA design flows, early-stage 3D IC prediction, and fault simulation methods that remain useful under real design constraints.</p>
+      <p>Before joining CUHK, I received my master's degree in Electronic Information from the University of Chinese Academy of Sciences and the Institute of Computing Technology, Chinese Academy of Sciences, advised by Prof. Xiaowei Li and Prof. Huawei Li at the State Key Laboratory of Processors. I received my bachelor's degree in Microelectronics Science and Technology from Peking University, and have industrial EDA experience with CASTEST on fault simulation and ISO 26262-oriented functional safety analysis.</p>
     </div>
   </section>
 
@@ -85,7 +85,7 @@
       <article class="focus-card">
         <div class="focus-icon">3D</div>
         <h3>3D IC Design Automation</h3>
-        <p>Cross-stage knowledge distillation and early-stage prediction for 3D IC design, including timing, power, and FIT-oriented modeling.</p>
+        <p>Flow-oriented automation for industrial-grade 3D IC EDA, including cross-stage timing, power, and FIT-oriented prediction.</p>
       </article>
       <article class="focus-card">
         <div class="focus-icon">FS</div>
@@ -111,7 +111,7 @@
         <div>
           <div class="edu-head"><strong>University of Chinese Academy of Sciences &amp; ICT, CAS</strong><span>2022 — 2025</span></div>
           <p>M.Eng. in Electronic Information · GPA 3.78/4.0 (Top 5%)</p>
-          <p>Advisor: Prof. Xiaowei Li · State Key Laboratory of Processors</p>
+          <p>Advisors: Prof. Xiaowei Li and Prof. Huawei Li · State Key Laboratory of Processors</p>
         </div>
       </article>
       <article class="edu-item">
@@ -126,7 +126,7 @@
 
   <section id="publications" class="section container">
     <h2>Selected Publications</h2>
-    <p class="equal-note">† Equal contribution. Publications are ordered by year, then by author contribution and venue relevance to my current research agenda.</p>
+    <p class="equal-note">† Equal contribution. Each entry is marked as Conference or Journal. Publications are ordered by year, then by author contribution and relevance to my current AI4EDA and 3D IC design-automation research agenda.</p>
     <div class="pub-list">
       <article class="pub-card">
         <div class="venue-block badge-iclr">ICLR</div>
@@ -301,19 +301,19 @@
     <h2>Research Experience</h2>
     <div class="experience-list">
       <article>
-        <div class="time">Jul. 2023 — Mar. 2025</div>
-        <h3>Fault Simulation Research · State Key Laboratory of Processors, ICT, CAS</h3>
-        <ul><li>Developed hardware-aware and parallel fault simulation frameworks.</li><li>Studied optimization techniques for scalable circuit verification and testing.</li></ul>
+        <div class="time">May 2024 — Present</div>
+        <h3>AI4EDA, Circuit Multi-Modal Data, and 3D IC EDA Flow Automation</h3>
+        <ul><li>Built multi-modal circuit datasets incorporating specification, RTL, netlist, layout, timing, and power data.</li><li>Developed learning-based methods for circuit representation, cross-stage PPA prediction, and flow-oriented 3D IC design automation.</li></ul>
       </article>
       <article>
-        <div class="time">May 2024 — Present</div>
-        <h3>Circuit Multi-Modal Dataset and Machine Learning Applications</h3>
-        <ul><li>Built multi-modal circuit datasets incorporating netlist, RTL, and specification data.</li><li>Developed models for circuit functionality prediction and PPA estimation.</li></ul>
+        <div class="time">Jul. 2023 — Mar. 2025</div>
+        <h3>Fault Simulation Research · State Key Laboratory of Processors, ICT, CAS</h3>
+        <ul><li>Developed hardware-aware and parallel fault simulation frameworks for large-scale digital circuits.</li><li>Studied optimization techniques for scalable circuit verification, design-for-test workflows, and functional safety analysis.</li></ul>
       </article>
       <article>
         <div class="time">Sep. 2021 — Jan. 2025</div>
         <h3>Industrial Experience · CASTEST</h3>
-        <ul><li>Contributed to digital circuit fault simulation platforms and functional safety analysis tools.</li><li>Worked on ISO 26262-oriented workflows for automotive-grade chips.</li></ul>
+        <ul><li>Contributed to digital circuit fault simulation platforms and functional safety analysis tools.</li><li>Worked on ISO 26262-oriented workflows for automotive-grade chips, strengthening a practical view of industrial EDA flow requirements.</li></ul>
       </article>
       <article>
         <div class="time">Sep. 2020 — Jun. 2022</div>
@@ -365,10 +365,10 @@
 
   <section id="contact" class="section container contact">
     <h2>Collaboration &amp; Contact</h2>
-    <blockquote>I welcome collaborations on AI4EDA, 3D IC design automation, circuit representation learning, timing/power modeling, fault simulation, and hardware verification. Feel free to reach out.</blockquote>
+    <blockquote>I welcome collaborations on AI4EDA, 3D IC design automation and EDA flows, circuit representation learning, timing/power modeling, fault simulation, and hardware verification. Feel free to reach out.</blockquote>
     <p>Email: <a href="mailto:1155251294@link.cuhk.edu.hk">1155251294@link.cuhk.edu.hk</a> · <a href="mailto:wangmingjun000613@gmail.com">wangmingjun000613@gmail.com</a></p>
     <p>CUHK · Department of Computer Science and Engineering · Advisor: <a href="https://www.cse.cuhk.edu.hk/~byu/" target="_blank" rel="noopener">Prof. Bei Yu</a></p>
-    <p><a href="https://scholar.google.com/citations?user=E9aUbvAAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a> · <a href="https://github.com/xin-xi-xiao" target="_blank" rel="noopener">GitHub</a> · <a href="assets/cv.pdf" target="_blank" rel="noopener">CV</a></p>
+    <p><a href="https://scholar.google.com/citations?user=E9aUbvAAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a> · <a href="https://github.com/xin-xi-xiao" target="_blank" rel="noopener">GitHub</a> · <a href="assets/cv.pdf" target="_blank" rel="noopener" title="CV upload slot: place the latest PDF at assets/cv.pdf">CV</a></p>
   </section>
 </main>
 

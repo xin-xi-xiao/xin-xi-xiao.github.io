@@ -26,8 +26,8 @@ def render(source: Path) -> str:
     description = (
         "Mingjun Wang is a Ph.D. student in Computer Science and Engineering "
         "at The Chinese University of Hong Kong, working on AI4EDA, "
-        "3D IC design automation, circuit representation learning, and "
-        "fault simulation."
+        "flow-oriented 3D IC EDA design automation, circuit representation "
+        "learning, and fault simulation."
     )
     css_files: list[str] = []
     body: list[str] = []
