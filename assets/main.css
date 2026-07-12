@@ -380,16 +380,11 @@ h3 {
   border: 1px solid var(--c-border);
   border-radius: var(--radius-card);
   background: #fff;
-  transition: border-color 160ms ease, box-shadow 160ms ease;
+  transition: box-shadow 160ms ease;
 }
 
 .pub-card:hover {
-  border-color: rgba(31, 58, 147, 0.28);
   box-shadow: 0 8px 24px rgba(31, 41, 55, 0.06);
-}
-
-.pub-card.lead-work {
-  border-left: 3px solid var(--c-primary);
 }
 
 .venue-block {
@@ -554,7 +549,8 @@ h3 {
 }
 
 .skill-group strong {
-  width: 92px;
+  width: 112px;
+  flex: 0 0 112px;
 }
 
 .skill-group span {

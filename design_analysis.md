@@ -50,6 +50,6 @@ Mingjun Wang's homepage should combine Bei Yu's rigorous academic organization w
 ## July 2026 Refinement
 
 - Publications are grouped by year to make the expanded record easier to scan without splitting the single-page structure.
-- Within each year, first-author papers appear first, followed by co-first-author work and other collaborations. A restrained blue left rule identifies first-author work without adding promotional text.
+- Within each year, first-author papers appear first, followed by co-first-author work and other collaborations. All publication cards use the same border treatment so author contribution is conveyed by ordering and bolded names rather than decorative lines.
 - Newly accepted ICCAD 2026 papers use a small accepted-status badge; unavailable paper links are intentionally omitted until public records exist.
 - Hover feedback, tabular date numerals, reduced-motion support, canonical metadata, and social-preview metadata improve polish and accessibility without changing the academic character.
