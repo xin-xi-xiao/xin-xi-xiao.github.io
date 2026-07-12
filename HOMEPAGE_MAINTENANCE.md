@@ -24,7 +24,7 @@ The site is a pure static, single-page academic homepage. It is written in a jem
 │   ├── cuhk.png              # CUHK logo
 │   ├── ict.svg               # ICT/CAS logo
 │   ├── pku.png               # Peking University logo
-│   └── cv.pdf                # Reserved CV upload slot; currently intentionally absent
+│   └── cv.pdf                # Public CV downloaded from the homepage
 ├── tools/
 │   └── render_jemdoc.py      # Renderer: converts index.jemdoc to index.html
 ├── README.md                 # Short repository overview
@@ -99,13 +99,13 @@ Fault simulation remains visible because it is an important foundation in the pu
 
 ## 6. CV PDF Policy
 
-The public CV file is currently intentionally removed. The webpage keeps a stable interface:
+The public CV is stored at the stable path:
 
 ```text
 assets/cv.pdf
 ```
 
-This means the CV links and buttons already point to the correct future location. Until a file is added there, the CV link will return a missing-file page.
+The CV links and buttons point to this path. Keep the filename unchanged when replacing the PDF.
 
 To publish or update the CV:
 
@@ -376,5 +376,5 @@ Before pushing, confirm:
 - No patents or under-review papers are included.
 - Awards contain no duplicate EDA² 2023 item.
 - Research Experience dates are correct.
-- The CV file is either intentionally absent or placed at `assets/cv.pdf`.
+- The latest public CV is placed at `assets/cv.pdf` and its cache version is updated in `index.jemdoc`.
 - `git status` is clean after commit.

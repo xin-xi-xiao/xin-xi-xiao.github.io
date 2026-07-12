@@ -46,3 +46,10 @@ Mingjun Wang's homepage should combine Bei Yu's rigorous academic organization w
 - Each publication card explicitly marks whether the entry is a journal article or a conference paper, because the selected list mixes TCAD journal papers with conference papers.
 - The CSS file is versioned in the generated HTML to avoid old GitHub Pages/browser caches preserving the previous circular portrait rule.
 - The hero, research cards, publication ordering, and research-experience order now foreground AI4EDA and 3D IC design automation as the primary research identity. Industrial-grade 3D IC EDA design flow is included as a recurring but not overbearing theme, while circuit representation learning and fault simulation remain explicit, visible research threads.
+
+## July 2026 Refinement
+
+- Publications are grouped by year to make the expanded record easier to scan without splitting the single-page structure.
+- Within each year, first-author papers appear first, followed by co-first-author work and other collaborations. A restrained blue left rule identifies first-author work without adding promotional text.
+- Newly accepted ICCAD 2026 papers use a small accepted-status badge; unavailable paper links are intentionally omitted until public records exist.
+- Hover feedback, tabular date numerals, reduced-motion support, canonical metadata, and social-preview metadata improve polish and accessibility without changing the academic character.

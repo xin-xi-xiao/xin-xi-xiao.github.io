@@ -114,7 +114,11 @@ def render(source: Path) -> str:
   <meta property="og:title" content="{html.escape(title)}" />
   <meta property="og:description" content="{html.escape(description)}" />
   <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://xin-xi-xiao.github.io/" />
+  <meta property="og:image" content="https://xin-xi-xiao.github.io/assets/photo.jpg" />
+  <meta name="theme-color" content="#1F3A93" />
   <meta name="generator" content="jemdoc-style renderer" />
+  <link rel="canonical" href="https://xin-xi-xiao.github.io/" />
   <title>{html.escape(title)}</title>
 {css_tags}
 </head>

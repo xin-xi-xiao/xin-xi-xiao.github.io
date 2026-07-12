@@ -33,7 +33,7 @@ For the user-homepage repository `xin-xi-xiao/xin-xi-xiao.github.io`, GitHub Pag
 
 The homepage includes accepted or publicly verifiable research outputs only. Intellectual-property records and non-accepted manuscripts were intentionally omitted. Awards, education, service, projects, and skills were reorganized from the local CV files supplied in this directory.
 
-The public CV PDF is intentionally not included at the moment. The webpage keeps the link target `assets/cv.pdf` as a stable upload slot. To publish a CV later, place the latest PDF at `assets/cv.pdf`, rebuild `index.html`, commit, and push.
+The public CV is stored at `assets/cv.pdf`. Replace that file with the latest PDF, update the cache version in `index.jemdoc`, rebuild `index.html`, commit, and push.
 
 ## Public Sources Cross-Checked
 
