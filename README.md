@@ -29,6 +29,14 @@ git push -u origin main
 
 For the user-homepage repository `xin-xi-xiao/xin-xi-xiao.github.io`, GitHub Pages serves the root of the `main` branch at `https://xin-xi-xiao.github.io/`.
 
+The renderer keeps that URL as the default canonical address. To prepare a build for a verified replacement domain, set `HOMEPAGE_URL` when rendering:
+
+```bash
+HOMEPAGE_URL=https://www.example.com/ python3 tools/render_jemdoc.py index.jemdoc
+```
+
+Do not change the canonical URL or add a `CNAME` file until the target GitHub account or custom domain is under your control. See the alternate-address section in [`HOMEPAGE_MAINTENANCE.md`](HOMEPAGE_MAINTENANCE.md).
+
 ## Content Policy Used Here
 
 The homepage includes accepted or publicly verifiable research outputs only. Intellectual-property records and non-accepted manuscripts were intentionally omitted. Awards, education, service, projects, and skills were reorganized from the local CV files supplied in this directory.

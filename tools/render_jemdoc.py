@@ -8,9 +8,21 @@ raw HTML blocks, and per-page CSS declarations.
 from __future__ import annotations
 
 import html
+import os
 import re
 import sys
 from pathlib import Path
+
+
+DEFAULT_SITE_URL = "https://xin-xi-xiao.github.io/"
+
+
+def site_url() -> str:
+    """Return the canonical site root, with one trailing slash."""
+    value = os.environ.get("HOMEPAGE_URL", DEFAULT_SITE_URL).strip()
+    if not re.fullmatch(r"https://[^\s/]+(?:/[^\s]*)?", value):
+        raise ValueError("HOMEPAGE_URL must be an absolute HTTPS URL")
+    return value.rstrip("/") + "/"
 
 
 def inline_markup(text: str) -> str:
@@ -30,6 +42,7 @@ def render(source: Path) -> str:
         "learning, and fault simulation."
     )
     css_files: list[str] = []
+    canonical_url = site_url()
     body: list[str] = []
     paragraph: list[str] = []
     in_raw = False
@@ -114,11 +127,11 @@ def render(source: Path) -> str:
   <meta property="og:title" content="{html.escape(title)}" />
   <meta property="og:description" content="{html.escape(description)}" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://xin-xi-xiao.github.io/" />
-  <meta property="og:image" content="https://xin-xi-xiao.github.io/assets/photo.jpg" />
+  <meta property="og:url" content="{html.escape(canonical_url)}" />
+  <meta property="og:image" content="{html.escape(canonical_url)}assets/photo.jpg" />
   <meta name="theme-color" content="#1F3A93" />
   <meta name="generator" content="jemdoc-style renderer" />
-  <link rel="canonical" href="https://xin-xi-xiao.github.io/" />
+  <link rel="canonical" href="{html.escape(canonical_url)}" />
   <title>{html.escape(title)}</title>
 {css_tags}
 </head>

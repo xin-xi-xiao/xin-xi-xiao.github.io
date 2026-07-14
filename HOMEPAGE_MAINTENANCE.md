@@ -378,3 +378,84 @@ Before pushing, confirm:
 - Research Experience dates are correct.
 - The latest public CV is placed at `assets/cv.pdf` and its cache version is updated in `index.jemdoc`.
 - `git status` is clean after commit.
+
+## 17. Alternate Address and Domain Migration
+
+### 17.1 How a `github.io` address is assigned
+
+A GitHub user or organization homepage must be owned by an account whose name matches the repository and hostname. For example:
+
+```text
+GitHub owner: MingjunWang
+Repository:   MingjunWang.github.io
+Website:      https://mingjunwang.github.io/
+```
+
+Creating a repository named `mingjunwang.github.io` under `xin-xi-xiao` would not claim that hostname. It would only create a project site under the `xin-xi-xiao.github.io` namespace.
+
+As checked on 2026-07-14, `MingjunWang` is already an existing GitHub personal account, while `https://mingjunwang.github.io/` returns 404 because that account has no public `MingjunWang.github.io` repository. If this account belongs to the site owner, sign in to it and create the public repository `MingjunWang.github.io`. If it belongs to someone else, GitHub will not allow another user or organization to claim the same case-insensitive name.
+
+### 17.2 Recommended option: one canonical custom domain
+
+For a durable academic identity, use one personally owned domain as the canonical address and keep GitHub Pages as the hosting platform. Suitable forms include `mingjunwang.com`, `mingjunwang.me`, or another domain confirmed as available by a registrar. Domain availability and price must be checked at purchase time.
+
+After buying the domain:
+
+1. In GitHub account settings, open **Pages** and verify the domain with the TXT record GitHub provides.
+2. In `xin-xi-xiao/xin-xi-xiao.github.io`, open **Settings > Pages** and enter the custom domain.
+3. Configure the DNS records at the registrar. For an apex domain, use GitHub's current Pages `A` records; for `www`, point a `CNAME` record to `xin-xi-xiao.github.io`.
+4. Keep the verification TXT record and enable **Enforce HTTPS** after the certificate is ready.
+5. If Pages publishes from a branch, retain the generated root-level `CNAME` file in Git.
+6. Rebuild metadata with the final canonical URL, commit, and push:
+
+```bash
+cd /data0/wangmingjun_homepage
+HOMEPAGE_URL=https://www.example.com/ python3 tools/render_jemdoc.py index.jemdoc
+git add index.html CNAME
+git commit -m "feat: use custom homepage domain"
+git push -u origin main
+```
+
+Replace `www.example.com` with the owned and verified domain. Once configured, GitHub Pages redirects the default `github.io` address to the custom domain, so there is only one public canonical copy to maintain.
+
+### 17.3 Alternative: migrate to `mingjunwang.github.io`
+
+Use this route only if the existing `MingjunWang` GitHub account belongs to the site owner and access has been recovered.
+
+1. Sign in to `MingjunWang` and create a public repository named `MingjunWang.github.io`.
+2. Add `xin-xi-xiao` as a collaborator, or configure a separate SSH key/token for `MingjunWang`.
+3. Add the repository as a temporary remote and test access:
+
+```bash
+cd /data0/wangmingjun_homepage
+git remote add new-home https://github.com/MingjunWang/MingjunWang.github.io.git
+git ls-remote new-home
+```
+
+4. Rebuild the metadata for the new primary address and push:
+
+```bash
+HOMEPAGE_URL=https://mingjunwang.github.io/ python3 tools/render_jemdoc.py index.jemdoc
+git add index.html
+git commit -m "feat: migrate canonical homepage address"
+git push new-home main
+```
+
+5. Verify the new Pages deployment before changing the old site. After verification, replace the old site with a simple permanent redirect to the new address, or keep the old content temporarily with its canonical link pointing to `https://mingjunwang.github.io/`.
+6. Choose one repository as the only editable source. Do not independently edit two full copies, because they will drift over time.
+
+### 17.4 Renderer URL control
+
+`tools/render_jemdoc.py` reads the optional `HOMEPAGE_URL` environment variable and uses it for:
+
+- `<link rel="canonical">`
+- `og:url`
+- the absolute `og:image` URL
+
+Without the variable, it safely defaults to:
+
+```text
+https://xin-xi-xiao.github.io/
+```
+
+Only HTTPS absolute URLs are accepted. This prevents an accidental malformed canonical address from being published.
