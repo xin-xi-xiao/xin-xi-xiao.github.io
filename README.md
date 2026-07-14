@@ -45,6 +45,8 @@ The homepage includes accepted or publicly verifiable research outputs only. Int
 
 The public CV is stored at `assets/cv.pdf`. Replace that file with the latest PDF, update the cache version in `index.jemdoc`, rebuild `index.html`, commit, and push.
 
+The compact `WM` chip/AI mark is used as the navigation brand and browser/device icon. The normalized master is `assets/brand-mark-512.png`; smaller files in `assets/` are purpose-sized so the browser does not download the original high-resolution artwork for a 28 px or 32 px display.
+
 ## Public Sources Cross-Checked
 
 - Google Scholar profile supplied by the owner: `https://scholar.google.com/citations?user=E9aUbvAAAAAJ`

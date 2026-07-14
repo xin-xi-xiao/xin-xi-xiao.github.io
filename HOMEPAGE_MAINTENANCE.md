@@ -21,6 +21,11 @@ The site is a pure static, single-page academic homepage. It is written in a jem
 ├── assets/
 │   ├── main.css              # All visual styling and responsive layout rules
 │   ├── photo.jpg             # Processed portrait used in the hero area
+│   ├── brand-mark-512.png    # Normalized high-resolution WM brand mark
+│   ├── brand-mark-128.png    # Lightweight navigation brand mark
+│   ├── favicon-32.png        # Browser-tab icon
+│   ├── icon-192.png          # High-density browser/device icon
+│   ├── apple-touch-icon.png  # iOS home-screen icon
 │   ├── cuhk.png              # CUHK logo
 │   ├── ict.svg               # ICT/CAS logo
 │   ├── pku.png               # Peking University logo
@@ -129,6 +134,18 @@ href="assets/cv.pdf?v=20260601"
 Then rebuild and push.
 
 ## 7. Image and Logo Updates
+
+Personal brand mark:
+
+```text
+assets/brand-mark-512.png
+assets/brand-mark-128.png
+assets/favicon-32.png
+assets/icon-192.png
+assets/apple-touch-icon.png
+```
+
+The 512 px file is the normalized master. The 128 px file is displayed beside the name in the sticky navigation, while the 32/180/192 px variants are declared in `tools/render_jemdoc.py` for browser tabs and device shortcuts. Keep the visible navigation mark at approximately 28 px so it supports the name without competing with the portrait. When replacing the artwork, regenerate all variants from the same square crop, update the icon cache version in both `index.jemdoc` and `tools/render_jemdoc.py`, and rebuild `index.html`.
 
 Portrait:
 

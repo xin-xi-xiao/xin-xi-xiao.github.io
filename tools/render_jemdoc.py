@@ -131,6 +131,9 @@ def render(source: Path) -> str:
   <meta property="og:image" content="{html.escape(canonical_url)}assets/photo.jpg" />
   <meta name="theme-color" content="#1F3A93" />
   <meta name="generator" content="jemdoc-style renderer" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png?v=20260715" />
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png?v=20260715" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png?v=20260715" />
   <link rel="canonical" href="{html.escape(canonical_url)}" />
   <title>{html.escape(title)}</title>
 {css_tags}
