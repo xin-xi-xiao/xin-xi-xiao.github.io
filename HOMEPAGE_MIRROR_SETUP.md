@@ -9,6 +9,23 @@ https://wang-mingjun.github.io/
 
 The existing `xin-xi-xiao/xin-xi-xiao.github.io` repository remains the only editable source. Every push to its `main` branch triggers a GitHub Actions workflow that publishes the same tracked website files to `wang-mingjun/wang-mingjun.github.io`.
 
+## Current Deployment Status
+
+Status verified on 2026-07-15:
+
+- [x] Organization `Wang-Mingjun` created.
+- [x] Public repository `Wang-Mingjun/wang-mingjun.github.io` created.
+- [x] Account `xin-xi-xiao` granted Admin access to the target repository.
+- [x] Mirror workflow prepared locally in the source repository.
+- [x] Independent local Git remote `mirror` configured without changing `origin`.
+- [ ] Local source commits pushed to `xin-xi-xiao/xin-xi-xiao.github.io`.
+- [ ] Fine-grained mirror token created.
+- [ ] Source repository secret `HOMEPAGE_MIRROR_TOKEN` configured.
+- [ ] First mirror workflow completed successfully.
+- [ ] Target GitHub Pages enabled and returning HTTP 200.
+
+Current remote checks show that the target repository exists but is empty and its Pages endpoint returns 404. This is expected until the first synchronization and Pages activation are complete. The existing homepage returns HTTP 200 and remains unaffected.
+
 ## 1. Design and Safety Properties
 
 - The existing homepage is not renamed, transferred, or reconfigured.
@@ -48,6 +65,8 @@ GitHub requires an organization homepage repository to match `<organization>.git
 
 The standard `GITHUB_TOKEN` for the source repository cannot write to a different organization repository. Create a dedicated fine-grained personal access token:
 
+Open `https://github.com/settings/personal-access-tokens/new` while signed in as `xin-xi-xiao`.
+
 1. Open GitHub **Settings > Developer settings > Personal access tokens > Fine-grained tokens**.
 2. Select **Generate new token**.
 3. Use a descriptive name such as `homepage-mirror-writer`.
@@ -62,6 +81,8 @@ Treat the token as a password. Do not place it in a source file, shell history, 
 ## 5. Store the Token in the Source Repository
 
 In `xin-xi-xiao/xin-xi-xiao.github.io`:
+
+Open `https://github.com/xin-xi-xiao/xin-xi-xiao.github.io/settings/secrets/actions/new`.
 
 1. Open **Settings > Secrets and variables > Actions**.
 2. Select **New repository secret**.
@@ -86,6 +107,10 @@ git push -u origin main
 
 Then open the source repository's **Actions** tab:
 
+```text
+https://github.com/xin-xi-xiao/xin-xi-xiao.github.io/actions/workflows/sync-homepage-mirror.yml
+```
+
 1. Select **Sync homepage mirror**.
 2. Select **Run workflow** on `main`.
 3. Confirm that `Build a clean mirror commit` succeeds.
@@ -96,6 +121,8 @@ The same workflow runs automatically after every subsequent push to the source `
 ## 7. Enable GitHub Pages on the Target
 
 After the first mirror commit appears in `wang-mingjun/wang-mingjun.github.io`:
+
+Open `https://github.com/Wang-Mingjun/wang-mingjun.github.io/settings/pages`.
 
 1. Open target repository **Settings > Pages**.
 2. Under **Build and deployment**, choose **Deploy from a branch**.
