@@ -34,7 +34,7 @@ Current remote checks show that the target repository exists but is empty and it
 - The mirror excludes `.github` to prevent recursive workflow execution.
 - The mirror excludes `CNAME` to prevent a future custom-domain conflict.
 - `.source-commit` records the exact source commit represented by each mirror build.
-- The generated HTML keeps `https://xin-xi-xiao.github.io/` as its canonical URL, avoiding duplicate-content ambiguity for search engines.
+- The generated HTML keeps `https://wang-mingjun.github.io/` as its canonical URL, making the name-based homepage the preferred result while avoiding duplicate-content ambiguity for search engines.
 
 ## 2. Create the GitHub Organization
 

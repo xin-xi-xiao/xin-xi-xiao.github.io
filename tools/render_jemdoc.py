@@ -14,7 +14,7 @@ import sys
 from pathlib import Path
 
 
-DEFAULT_SITE_URL = "https://xin-xi-xiao.github.io/"
+DEFAULT_SITE_URL = "https://wang-mingjun.github.io/"
 
 
 def site_url() -> str:

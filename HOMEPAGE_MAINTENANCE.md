@@ -4,11 +4,13 @@ This document explains how the homepage is organized, how each file is used, and
 
 ## 1. Repository Purpose
 
-This repository is the GitHub Pages source for:
+This repository is the editable GitHub Pages source. Its preferred public address is:
 
 ```text
-https://xin-xi-xiao.github.io/
+https://wang-mingjun.github.io/
 ```
+
+The same content remains available at `https://xin-xi-xiao.github.io/`; its generated canonical link points search engines to the preferred address above.
 
 The site is a pure static, single-page academic homepage. It is written in a jemdoc-like source file and rendered to plain HTML, so GitHub Pages can serve it directly without a build server.
 
@@ -336,11 +338,29 @@ git commit -m "fix: refine homepage layout and research narrative"
 git push -u origin main
 ```
 
-After pushing, visit:
+After pushing, visit the preferred public address:
 
 ```text
-https://xin-xi-xiao.github.io/
+https://wang-mingjun.github.io/
 ```
+
+## 14.1 Google Search Console
+
+The canonical address to add as a URL-prefix property is:
+
+```text
+https://wang-mingjun.github.io/
+```
+
+The root-level file `googleeb48c6bcf48b80a4.html` is a Google **HTML file** verification file, not an HTML-tag verification snippet. Keep its filename and one-line content exactly unchanged. After it is committed and the mirror deployment finishes, verify that this URL opens as plain text:
+
+```text
+https://wang-mingjun.github.io/googleeb48c6bcf48b80a4.html
+```
+
+In Search Console, choose **HTML file** for this supplied file. If you instead choose **HTML tag**, Google will give you a different `<meta name="google-site-verification" ...>` value; add that exact tag to `tools/render_jemdoc.py` before the canonical link, rebuild, and deploy.
+
+After verification, use **URL inspection** for `https://wang-mingjun.github.io/` and select **Request indexing**. The repository also publishes `robots.txt` and `sitemap.xml`, both of which identify the same canonical URL. Requesting indexing asks Google to crawl the page; it does not guarantee an immediate ranking or inclusion.
 
 ## 15. Recommended Update Workflow
 
@@ -529,7 +549,7 @@ If a free `github.io` address is required, the preferred available-looking optio
 Without the variable, it safely defaults to:
 
 ```text
-https://xin-xi-xiao.github.io/
+https://wang-mingjun.github.io/
 ```
 
 Only HTTPS absolute URLs are accepted. This prevents an accidental malformed canonical address from being published.

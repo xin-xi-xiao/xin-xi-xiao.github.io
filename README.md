@@ -29,9 +29,9 @@ git commit -m "refactor: redesign academic homepage"
 git push -u origin main
 ```
 
-For the user-homepage repository `xin-xi-xiao/xin-xi-xiao.github.io`, GitHub Pages serves the root of the `main` branch at `https://xin-xi-xiao.github.io/`.
+The editable source repository `xin-xi-xiao/xin-xi-xiao.github.io` continues to publish at `https://xin-xi-xiao.github.io/`. Its synchronized public counterpart is `https://wang-mingjun.github.io/`, which is the site's preferred canonical address.
 
-The renderer keeps that URL as the default canonical address. To prepare a build for a verified replacement domain, set `HOMEPAGE_URL` when rendering:
+The renderer uses `https://wang-mingjun.github.io/` as the default canonical address. To prepare a build for a verified replacement domain, set `HOMEPAGE_URL` when rendering:
 
 ```bash
 HOMEPAGE_URL=https://www.example.com/ python3 tools/render_jemdoc.py index.jemdoc
