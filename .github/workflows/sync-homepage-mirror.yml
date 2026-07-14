@@ -1,0 +1,86 @@
+name: Sync homepage mirror
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: homepage-mirror
+  cancel-in-progress: true
+
+jobs:
+  sync:
+    if: github.repository == 'xin-xi-xiao/xin-xi-xiao.github.io'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out the canonical source
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Check mirror configuration
+        id: mirror-config
+        env:
+          MIRROR_TOKEN: ${{ secrets.HOMEPAGE_MIRROR_TOKEN }}
+        run: |
+          if [ -z "$MIRROR_TOKEN" ]; then
+            echo "enabled=false" >> "$GITHUB_OUTPUT"
+            echo "::notice::Mirror sync is ready but HOMEPAGE_MIRROR_TOKEN is not configured."
+          else
+            echo "enabled=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Build a clean mirror commit
+        if: steps.mirror-config.outputs.enabled == 'true'
+        env:
+          SOURCE_SHA: ${{ github.sha }}
+        run: |
+          mirror_dir="$RUNNER_TEMP/homepage-mirror"
+          mkdir -p "$mirror_dir"
+          git archive HEAD | tar -x -C "$mirror_dir"
+
+          # The target is a deploy-only mirror. Excluding workflow and domain
+          # configuration prevents recursive runs and future CNAME conflicts.
+          rm -rf "$mirror_dir/.github"
+          rm -f "$mirror_dir/CNAME"
+          printf '%s\n' "$SOURCE_SHA" > "$mirror_dir/.source-commit"
+
+          git -C "$mirror_dir" init --initial-branch=main
+          git -C "$mirror_dir" config user.name "github-actions[bot]"
+          git -C "$mirror_dir" config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git -C "$mirror_dir" add -A
+          git -C "$mirror_dir" commit -m "chore: mirror homepage from $SOURCE_SHA"
+
+      - name: Push the mirror
+        if: steps.mirror-config.outputs.enabled == 'true'
+        env:
+          HOMEPAGE_MIRROR_TOKEN: ${{ secrets.HOMEPAGE_MIRROR_TOKEN }}
+        run: |
+          askpass="$RUNNER_TEMP/homepage-mirror-askpass.sh"
+          cat > "$askpass" <<'EOF'
+          #!/bin/sh
+          case "$1" in
+            *Username*) printf '%s\n' 'x-access-token' ;;
+            *Password*) printf '%s\n' "$HOMEPAGE_MIRROR_TOKEN" ;;
+          esac
+          EOF
+          chmod 700 "$askpass"
+
+          mirror_dir="$RUNNER_TEMP/homepage-mirror"
+          GIT_ASKPASS="$askpass" GIT_TERMINAL_PROMPT=0 \
+            git -C "$mirror_dir" push --force \
+            https://github.com/wang-mingjun/wang-mingjun.github.io.git \
+            main:main
+
+          local_sha=$(git -C "$mirror_dir" rev-parse HEAD)
+          remote_sha=$(git ls-remote \
+            https://github.com/wang-mingjun/wang-mingjun.github.io.git \
+            refs/heads/main | cut -f1)
+          test "$local_sha" = "$remote_sha"
+          echo "Mirror verified at commit $remote_sha"

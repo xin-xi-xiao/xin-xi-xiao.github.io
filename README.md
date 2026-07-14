@@ -6,6 +6,8 @@ The page combines Bei Yu-style academic information structure with Yao Lai-style
 
 For the complete maintenance guide, including file roles, CV updates, local preview, debugging, and deployment, see [`HOMEPAGE_MAINTENANCE.md`](HOMEPAGE_MAINTENANCE.md).
 
+For the optional synchronized mirror at `https://wang-mingjun.github.io/`, including organization creation, least-privilege token setup, automatic synchronization, verification, and rollback, see [`HOMEPAGE_MIRROR_SETUP.md`](HOMEPAGE_MIRROR_SETUP.md).
+
 ## Local Build
 
 ```bash

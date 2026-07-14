@@ -499,7 +499,7 @@ GitHub user and organization names are case-insensitive. The following namespace
 
 An API 404 means that no public account was found at that moment; it does not reserve the name and does not guarantee that GitHub will accept it during organization creation. The final check occurs in GitHub's **New organization** form.
 
-If a free `github.io` address is required, the preferred available-looking option is `wang-mingjun.github.io` because it preserves the full name and avoids field or institution suffixes. Create an organization named `wang-mingjun` while signed in as `xin-xi-xiao`, then create its public repository `wang-mingjun.github.io`. This remains a second-choice solution because the hyphenated address is less memorable than `mingjunwang.com` and requires an additional organization/repository to maintain.
+If a free `github.io` address is required, the preferred available-looking option is `wang-mingjun.github.io` because it preserves the full name and avoids field or institution suffixes. Create an organization named `wang-mingjun` while signed in as `xin-xi-xiao`, then create its public repository `wang-mingjun.github.io`. The source repository now includes an optional one-way synchronization workflow; follow `HOMEPAGE_MIRROR_SETUP.md` to configure it without changing the existing Pages site.
 
 ### 17.5 Renderer URL control
 
