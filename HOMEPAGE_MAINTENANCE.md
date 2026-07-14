@@ -397,26 +397,64 @@ As checked on 2026-07-14, `MingjunWang` is already an existing GitHub personal a
 
 ### 17.2 Recommended option: one canonical custom domain
 
-For a durable academic identity, use one personally owned domain as the canonical address and keep GitHub Pages as the hosting platform. Suitable forms include `mingjunwang.com`, `mingjunwang.me`, or another domain confirmed as available by a registrar. Domain availability and price must be checked at purchase time.
+For a durable academic identity, use one personally owned domain as the canonical address and keep GitHub Pages as the hosting platform. The recommended name is:
+
+```text
+https://mingjunwang.com/
+```
+
+It is the full English name, contains no hyphen or affiliation, is easy to cite in papers and slides, and remains suitable after graduation or a change of institution. An authoritative RDAP lookup returned no registration record for `mingjunwang.com` on 2026-07-14. This is a point-in-time technical check, not a reservation: availability and price must still be confirmed at a registrar and the domain should be purchased before any repository or DNS change.
+
+Other RDAP results from the same check:
+
+| Domain | Result on 2026-07-14 | Assessment |
+| --- | --- | --- |
+| `mingjunwang.com` | No registration record found | Best choice; verify and register first |
+| `mingjunwang.me` | No registration record found | Good personal-site fallback |
+| `mingjunwang.dev` | No registration record found | Technical, but less neutral than `.com` |
+| `mingjunwang.io` | No registration record found | Usually more expensive; less personal |
+| `mingjunwang.ai` | No registration record found | Relevant today, but ties the identity to one field |
+| `mjwang.com` | Registered | Not available through normal registration |
+| `mingjun.wang` | Registered | Not available through normal registration |
+
+The intended final URL behavior is:
+
+```text
+https://mingjunwang.com/       canonical homepage
+https://www.mingjunwang.com/   redirects to the canonical homepage
+https://xin-xi-xiao.github.io/ redirects to the canonical homepage
+```
 
 After buying the domain:
 
 1. In GitHub account settings, open **Pages** and verify the domain with the TXT record GitHub provides.
 2. In `xin-xi-xiao/xin-xi-xiao.github.io`, open **Settings > Pages** and enter the custom domain.
-3. Configure the DNS records at the registrar. For an apex domain, use GitHub's current Pages `A` records; for `www`, point a `CNAME` record to `xin-xi-xiao.github.io`.
+3. Configure these DNS records at the registrar:
+
+```text
+Type    Name    Value
+A       @       185.199.108.153
+A       @       185.199.109.153
+A       @       185.199.110.153
+A       @       185.199.111.153
+CNAME   www     xin-xi-xiao.github.io
+```
+
+The four addresses above are GitHub's documented Pages IPv4 records as checked on 2026-07-14. Recheck the official GitHub documentation before applying them in the future. Do not use a wildcard DNS record.
+
 4. Keep the verification TXT record and enable **Enforce HTTPS** after the certificate is ready.
 5. If Pages publishes from a branch, retain the generated root-level `CNAME` file in Git.
 6. Rebuild metadata with the final canonical URL, commit, and push:
 
 ```bash
 cd /data0/wangmingjun_homepage
-HOMEPAGE_URL=https://www.example.com/ python3 tools/render_jemdoc.py index.jemdoc
+HOMEPAGE_URL=https://mingjunwang.com/ python3 tools/render_jemdoc.py index.jemdoc
 git add index.html CNAME
 git commit -m "feat: use custom homepage domain"
 git push -u origin main
 ```
 
-Replace `www.example.com` with the owned and verified domain. Once configured, GitHub Pages redirects the default `github.io` address to the custom domain, so there is only one public canonical copy to maintain.
+Only run this after the domain is owned, verified, and saved in the repository's Pages settings. Once configured, GitHub Pages redirects the default `github.io` address to the custom domain, so there is only one public canonical copy to maintain.
 
 ### 17.3 Alternative: migrate to `mingjunwang.github.io`
 
@@ -444,7 +482,26 @@ git push new-home main
 5. Verify the new Pages deployment before changing the old site. After verification, replace the old site with a simple permanent redirect to the new address, or keep the old content temporarily with its canonical link pointing to `https://mingjunwang.github.io/`.
 6. Choose one repository as the only editable source. Do not independently edit two full copies, because they will drift over time.
 
-### 17.4 Renderer URL control
+### 17.4 Name-only `github.io` alternatives
+
+GitHub user and organization names are case-insensitive. The following namespace check was performed through GitHub's public API on 2026-07-14:
+
+| Desired address | Required owner | Result |
+| --- | --- | --- |
+| `mingjunwang.github.io` | `MingjunWang` | Occupied by an existing personal account; usable only if it belongs to the site owner |
+| `mjwang.github.io` | `mjwang` | Occupied |
+| `mj-wang.github.io` | `mj-wang` | Occupied |
+| `mingjun-wang.github.io` | `mingjun-wang` | Occupied |
+| `wangmingjun.github.io` | `wangmingjun` | Occupied |
+| `wang-mingjun.github.io` | `wang-mingjun` | No public account found at check time |
+| `mingjun-w.github.io` | `mingjun-w` | No public account found at check time |
+| `m-j-wang.github.io` | `m-j-wang` | No public account found at check time |
+
+An API 404 means that no public account was found at that moment; it does not reserve the name and does not guarantee that GitHub will accept it during organization creation. The final check occurs in GitHub's **New organization** form.
+
+If a free `github.io` address is required, the preferred available-looking option is `wang-mingjun.github.io` because it preserves the full name and avoids field or institution suffixes. Create an organization named `wang-mingjun` while signed in as `xin-xi-xiao`, then create its public repository `wang-mingjun.github.io`. This remains a second-choice solution because the hyphenated address is less memorable than `mingjunwang.com` and requires an additional organization/repository to maintain.
+
+### 17.5 Renderer URL control
 
 `tools/render_jemdoc.py` reads the optional `HOMEPAGE_URL` environment variable and uses it for:
 
