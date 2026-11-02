@@ -34,7 +34,7 @@
         <a href="https://scholar.google.com/citations?user=E9aUbvAAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a>
         <a href="https://github.com/xin-xi-xiao" target="_blank" rel="noopener">GitHub</a>
       </div>
-      <a class="primary-button" href="assets/cv.pdf?v=20261102" target="_blank" rel="noopener">CV (PDF)</a>
+      <a class="primary-button" href="assets/cv.pdf?v=20261102b" target="_blank" rel="noopener">CV (PDF)</a>
     </div>
     <aside class="hero-side" aria-label="Profile portrait and affiliations">
       <img class="portrait-card" src="assets/photo.jpg?v=20260713a" alt="Portrait of Mingjun Wang" width="132" height="185" />
@@ -183,7 +183,7 @@
           <p class="authors"><strong>Mingjun Wang†</strong>, Yihan Wen†, Yuntao Lu, Fengrui Liu, Yuxiang Zhao, Boyu Han, Jianan Mu, Yibo Lin, Runsheng Wang, Bei Yu, Huawei Li.</p>
           <p class="meta">Conference paper · International Conference on Learning Representations, 2026.</p>
           <p class="desc">More than 15,000 circuit instances from 8,659 validated designs, with multi-stage data for timing and power prediction.</p>
-          <div class="pub-links"><a href="https://openreview.net/forum?id=lEDb4gQ4dB" target="_blank" rel="noopener">OpenReview</a><a href="https://github.com/sklp-eda-lab/iclr-circuitnet_3.0/" target="_blank" rel="noopener">Code</a></div>
+          <div class="pub-links"><a href="https://proceedings.iclr.cc/paper_files/paper/2026/hash/2e0f5561c1553a97cee5fa64575358c9-Abstract-Conference.html" target="_blank" rel="noopener">Paper</a><a href="https://openreview.net/forum?id=lEDb4gQ4dB" target="_blank" rel="noopener">OpenReview</a><a href="https://github.com/sklp-eda-lab/iclr-circuitnet_3.0/" target="_blank" rel="noopener">Code</a></div>
         </div>
       </article>
 
@@ -219,7 +219,7 @@
           <p class="authors">Yanfang Liu†, <strong>Mingjun Wang†</strong>, Peng Xu, Rongliang Fu, Bei Yu, Tsung-Yi Ho.</p>
           <p class="meta">Conference paper · International Conference on Machine Learning, 2026.</p>
           <p class="desc">A neuro-symbolic verification framework for analog circuits.</p>
-          <div class="pub-links"><a href="https://www.cse.cuhk.edu.hk/~byu/publications.html" target="_blank" rel="noopener">CUHK Listing</a></div>
+          <div class="pub-links"><a href="https://www.cse.cuhk.edu.hk/~byu/papers/C356-ICML2026-AnalogVerifier.pdf" target="_blank" rel="noopener">Paper</a><a href="https://www.cse.cuhk.edu.hk/~byu/publications.html" target="_blank" rel="noopener">Publication record</a></div>
         </div>
       </article>
 
@@ -274,7 +274,7 @@
       <article class="pub-card">
         <div class="venue-block badge-aspdac">ASP-DAC</div>
         <div class="pub-body">
-          <span class="venue badge-aspdac">ASP-DAC 2026</span><span class="type-badge conference">Conference</span>
+          <span class="venue badge-aspdac">ASP-DAC 2026</span><span class="type-badge conference">Conference</span><span class="award-badge">Invited Paper</span>
           <h3>LLM-Assisted Circuit Verification: A Comprehensive Survey</h3>
           <p class="authors">Hongduo Liu, Yuntao Lu, <strong>Mingjun Wang</strong>, Xufeng Yao, Bei Yu.</p>
           <p class="meta">Conference paper · Asia and South Pacific Design Automation Conference, 2026.</p>
@@ -389,17 +389,17 @@
       <article>
         <div class="time">May 2024 — Present</div>
         <h3>LLM4EDA / AI4EDA and 3D IC Design Automation</h3>
-        <ul><li><strong>Circuit learning:</strong> developed multi-modal representations and cross-stage timing/power models through MOSS, RTLDistil, CircuitNet 3.0, and Distill3D.</li><li><strong>LLM-based EDA:</strong> contributed to functional coverage model generation and knowledge-constrained library tuning through ChatFCM and LibPilot.</li><li><strong>3D implementation:</strong> developed a research RTL-to-GDS flow integrating hybrid-bonding structures, clock-tree synthesis, routing, parasitic extraction, and timing analysis.</li><li><strong>Current focus:</strong> tool-using agents for chip implementation and physically grounded evaluation of design improvements.</li></ul>
+        <ul><li><strong>Circuit learning:</strong> developed multi-modal representations and cross-stage timing/power models through MOSS, RTLDistil, CircuitNet 3.0, and Distill3D.</li><li><strong>LLM-based EDA:</strong> designed and implemented functional coverage generation methods and tool-based validation in an industry-academic project; contributed to ChatFCM and knowledge-constrained library tuning with LibPilot.</li><li><strong>3D implementation:</strong> developed a research RTL-to-GDS flow integrating hybrid-bonding structures, clock-tree synthesis, routing, parasitic extraction, and timing analysis.</li><li><strong>Current focus:</strong> tool-using agents that improve chip designs under functional and physical constraints, evaluated through post-route results and tool-use costs.</li></ul>
       </article>
       <article>
         <div class="time">Jul. 2023 — Mar. 2025</div>
         <h3>Fault Simulation Research · State Key Laboratory of Processors, ICT, CAS</h3>
-        <ul><li>Developed hardware-aware and parallel fault simulation frameworks for large-scale digital circuits.</li><li>Studied optimization techniques for scalable circuit verification, design-for-test workflows, and functional safety analysis.</li></ul>
+        <ul><li>Developed hardware-aware parallel simulation using dominator-tree partitioning, strongly connected components, and pattern parallelism.</li><li>DomSim achieved a 10.29× average speedup over the commercial baseline in its published experiments; EPICS achieved 5.94× while preserving fault coverage in its experiments.</li></ul>
       </article>
       <article>
         <div class="time">Sep. 2021 — Jan. 2025</div>
         <h3>Industrial Experience · CASTEST</h3>
-        <ul><li>Contributed to digital circuit fault simulation platforms and functional safety analysis tools.</li><li>Worked on ISO 26262-oriented workflows for automotive-grade chips, strengthening a practical view of industrial EDA flow requirements.</li></ul>
+        <ul><li>Developed core fault simulation algorithms and contributed to tool integration, multi-core optimization, and industrial requirements validation.</li><li>Integrated parallel simulation into ISO 26262-oriented functional safety analysis workflows for automotive chips.</li></ul>
       </article>
       <article>
         <div class="time">Sep. 2020 — Jun. 2022</div>
@@ -456,7 +456,7 @@
     <blockquote>I welcome collaborations on LLM4EDA / AI4EDA and 3D IC design automation, especially tool-using agents, circuit learning, RTL-to-GDS flows, and timing closure. I also work on fault simulation and hardware verification.</blockquote>
     <p>Email: <a href="mailto:wangmingjun000613@gmail.com">wangmingjun000613@gmail.com</a> · <a href="mailto:mjwang25@cse.cuhk.edu.hk">mjwang25@cse.cuhk.edu.hk</a></p>
     <p>CUHK · Department of Computer Science and Engineering · Advisor: <a href="https://www.cse.cuhk.edu.hk/~byu/" target="_blank" rel="noopener">Prof. Bei Yu</a></p>
-    <p><a href="https://scholar.google.com/citations?user=E9aUbvAAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a> · <a href="https://github.com/xin-xi-xiao" target="_blank" rel="noopener">GitHub</a> · <a href="assets/cv.pdf?v=20261102" target="_blank" rel="noopener">CV</a></p>
+    <p><a href="https://scholar.google.com/citations?user=E9aUbvAAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a> · <a href="https://github.com/xin-xi-xiao" target="_blank" rel="noopener">GitHub</a> · <a href="assets/cv.pdf?v=20261102b" target="_blank" rel="noopener">CV</a></p>
   </section>
 </main>
 

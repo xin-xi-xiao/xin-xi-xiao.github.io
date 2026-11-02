@@ -74,6 +74,10 @@ After **Unpublish**, keep both Pages sources at `main` and `/ (root)` and create
 
 The owner confirmed the master's GPA as **3.77/4.0** on 2026-11-02; both CVs and the website use this value with Top 5%. Public and personal CVs distinguish accepted papers, published articles, and manuscripts. The public site does not claim awarded funding or production signoff from a research proposal.
 
+The owner also confirmed that **MigSizer remains accepted**. The 21-paper total includes it; 12 papers are first/co-first-author works. The LLM-assisted verification survey is an invited ASP-DAC 2026 paper according to the advisor's publication record. CircuitNet 3.0 now links to its official ICLR proceedings entry, and AnalogVerifier has a direct institutional paper link. Quantitative simulation results identify their respective published commercial baselines.
+
+Scholarship-specific Chinese documents and source evidence are maintained **outside this public repository**. The local application input PDFs and DOCX are ignored; do not force-add them. The two general-purpose English CVs retain their existing audience and layout, without importing application strategy or confidential project material.
+
 ## 1. Repository Purpose
 
 This repository is the editable GitHub Pages source. Its preferred public address is:
