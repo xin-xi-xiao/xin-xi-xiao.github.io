@@ -17,12 +17,15 @@ The editable source remains this repository. The preferred website is `https://w
 | `cv_content.tex`, `cv_style.tex` in the Overleaf checkout | Shared CV prose, layout, skills, education, and experience |
 | `cv_publications.tex` in the Overleaf checkout | Generated publication records; regenerate after editing the website |
 | `cv_private.tex` in the Overleaf checkout | Personal-only work in progress and patent applications |
+| `backups/20261102-before-refresh/` in the Overleaf checkout | Byte-identical original `main_forweb.tex` and `main_forself.tex`; never publish this folder |
 | `assets/cv.pdf` | Compiled **public** PDF served by both websites |
 | `tools/check_site.py` | Offline content/build checks; requires Python 3 and `pdftotext` (Poppler) |
 | `tools/check_layout.cjs` | Optional browser/accessibility checks using Playwright and axe |
 | `googleeb48c6bcf48b80a4.html` | Exact Google verification endpoint; do not rename or wrap in site HTML |
 
 The Google file downloaded with ` (1)` is byte-identical to the existing standard-named file. Keep the standard filename in the published root. Original CVs, research proposals, and duplicate downloads remain local reference inputs.
+
+Both original CV files are backed up from Overleaf commit `60d0431eb36d54a5730f524cf8366b1abaaddec9`; the active entry points remain at the project root. The CV maintenance document explains the layout changes from the original Charter/11pt design. All 21 public papers now have a publisher, proceedings, or institutional publication-record link; a listing link is not labeled as a downloadable paper.
 
 ### Rebuild after content changes
 

@@ -90,6 +90,7 @@ check(len(publications.records) == 21, "Expected 21 accepted/published papers")
 check(collections.Counter(p["type"] for p in publications.records) == {"Conference": 19, "Journal": 2}, "Incorrect Conference/Journal counts")
 check(len({p["title"] for p in publications.records}) == 21, "Duplicate publication")
 check(all("Mingjun Wang" in p["authors"] for p in publications.records), "Missing author on a paper")
+check(all(p["link"].startswith("https://") for p in publications.records), "Publication lacks a public record link")
 check(len(re.findall(r'<p class="authors">.*?<strong>Mingjun Wang[†‡]?</strong>', html)) == 21, "Owner not bold in every paper")
 hoist = next(p for p in publications.records if p["title"].startswith("HOIST:"))
 check("Mingjun Wang‡" in hoist["authors"] and "Binwu Zhu‡" in hoist["authors"] and "Mingjun Wang†" not in hoist["authors"], "Incorrect HOIST corresponding-author marks")
@@ -97,11 +98,13 @@ domsim = next(p for p in publications.records if p["title"].startswith("DomSim:"
 check("2026" in domsim["meta"] and "Zhongkai Yu, Zheng Liang" in domsim["authors"] and "Jing Ye, Xiaowei Li, Bei Yu, Huawei Li" in domsim["authors"], "DomSim final publication record differs")
 check(html.count("Jul. 2023 — Mar. 2025") == 1 and html.count("Sep. 2021 — Jan. 2025") == 1, "Experience dates changed")
 check(html.count("1st Prize — EDA²") == 1, "Duplicate EDA award")
+check("3.77/4.0" in html and "3.78/4.0" not in html, "Website GPA differs from the owner's confirmed value")
 for word in ["DistillTune", "ADAPT:", "Graph World Models", "Patents", "18518983880", "SILICA-Bench_Technical"]:
     check(word not in html, f"Private/non-accepted material in public HTML: {word}")
 
 cv_text = subprocess.check_output(["pdftotext", str(ROOT / "assets/cv.pdf"), "-"], text=True)
 cv_text = unicodedata.normalize("NFKC", cv_text)
+check("3.77/4.0" in cv_text and "3.78/4.0" not in cv_text, "Public CV GPA differs from the owner's confirmed value")
 for name in ["CU-3D:", "HOIST:", "Distill3D:", "MigSizer:", "LLM4EDA / AI4EDA", "Co-corresponding"]:
     check(name in cv_text, f"Public CV missing {name}")
 for word in ["18518983880", "DistillTune", "ADAPT:", "CN119272672A"]:
