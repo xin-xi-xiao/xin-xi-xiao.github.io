@@ -13,6 +13,7 @@ For the optional synchronized mirror at `https://wang-mingjun.github.io/`, inclu
 ```bash
 cd /data0/wangmingjun_homepage
 python3 tools/render_jemdoc.py index.jemdoc
+python3 tools/check_site.py
 ```
 
 Open `index.html` in a browser, or serve the folder with any static server:
@@ -24,8 +25,9 @@ python3 -m http.server 8000
 ## Publish to GitHub Pages
 
 ```bash
-git add -A
-git commit -m "refactor: redesign academic homepage"
+git status --short
+git add index.jemdoc index.html assets/main.css assets/cv.pdf sitemap.xml
+git commit -m "feat: update academic homepage"
 git push -u origin main
 ```
 
@@ -43,7 +45,21 @@ Do not change the canonical URL or add a `CNAME` file until the target GitHub ac
 
 The homepage includes accepted or publicly verifiable research outputs only. Intellectual-property records and non-accepted manuscripts were intentionally omitted. Awards, education, service, projects, and skills were reorganized from the local CV files supplied in this directory.
 
-The public CV is stored at `assets/cv.pdf`. Replace that file with the latest PDF, update the cache version in `index.jemdoc`, rebuild `index.html`, commit, and push.
+The public CV is stored at `assets/cv.pdf`. Its editable Overleaf checkout is `/data0/mingjun_cv_overleaf`: compile `main_forweb.tex` for the public download and `main_forself.tex` for the full personal version. Both share `cv_content.tex`, `cv_style.tex`, and `cv_publications.tex`; the full version also includes `cv_private.tex`. The original supplied PDFs are reference inputs and are not overwritten.
+
+After editing publications in `index.jemdoc`, synchronize the CV records with:
+
+```bash
+python3 tools/export_cv_publications.py /data0/mingjun_cv_overleaf/cv_publications.tex
+```
+
+Compile the public CV, replace `assets/cv.pdf`, update its cache version in `index.jemdoc`, render, test, and push. Do not upload the full personal CV or source proposals to the public site. Stage newly added public assets explicitly rather than using `git add -A`.
+
+The November 2026 update presents **LLM4EDA / AI4EDA** and **3D IC design automation** as two primary directions, with fault simulation as a supporting research foundation. Publications are ordered by year, with first/co-first-author papers before other collaborations; `†` marks equal contribution and `‡` marks co-corresponding authors. There are 21 accepted/published entries: 19 conference papers and 2 journal articles. Future venue years denote accepted upcoming papers, not completed presentations.
+
+Google's verification endpoint is `googleeb48c6bcf48b80a4.html`. The downloaded `googleeb48c6bcf48b80a4 (1).html` has identical content and is retained locally, not published as a second endpoint. Canonical and sitemap URLs remain `https://wang-mingjun.github.io/`.
+
+Optional browser checks use `tools/check_layout.cjs` with Playwright and `@axe-core/playwright`; see the maintenance guide for installation and invocation. They cover 320, 375, 768, and 1440 px layouts, image loading, anchor visibility, uniform publication borders, and automated accessibility checks.
 
 The compact `WM` chip/AI mark has two roles: the complete mark appears beside the navigation name, while a circular variant is published at the stable root path `favicon.png` for browser tabs and Google Search results. The normalized square master is `assets/brand-mark-512.png`; smaller files in `assets/` are purpose-sized for browser and device displays.
 

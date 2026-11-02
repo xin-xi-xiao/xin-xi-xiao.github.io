@@ -2,6 +2,75 @@
 
 This document explains how the homepage is organized, how each file is used, and how to update, preview, debug, and deploy the site.
 
+## November 2026 Workflow Update
+
+The editable source remains this repository. The preferred website is `https://wang-mingjun.github.io/`; `https://xin-xi-xiao.github.io/` publishes the same content. Both use GitHub Pages **Deploy from a branch**, `main`, `/ (root)`, HTTPS, and no custom domain.
+
+### Website and CV source ownership
+
+| File | Edit/use |
+| --- | --- |
+| `index.jemdoc` | All public page content and authoritative public publication records |
+| `tools/export_cv_publications.py` | Converts the publication records to a shared LaTeX file; requires only Python's standard library |
+| `/data0/mingjun_cv_overleaf/main_forweb.tex` | Overleaf public-CV entry point; compile this for the website |
+| `/data0/mingjun_cv_overleaf/main_forself.tex` | Full personal-CV entry point; not a public download |
+| `cv_content.tex`, `cv_style.tex` in the Overleaf checkout | Shared CV prose, layout, skills, education, and experience |
+| `cv_publications.tex` in the Overleaf checkout | Generated publication records; regenerate after editing the website |
+| `cv_private.tex` in the Overleaf checkout | Personal-only work in progress and patent applications |
+| `assets/cv.pdf` | Compiled **public** PDF served by both websites |
+| `tools/check_site.py` | Offline content/build checks; requires Python 3 and `pdftotext` (Poppler) |
+| `tools/check_layout.cjs` | Optional browser/accessibility checks using Playwright and axe |
+| `googleeb48c6bcf48b80a4.html` | Exact Google verification endpoint; do not rename or wrap in site HTML |
+
+The Google file downloaded with ` (1)` is byte-identical to the existing standard-named file. Keep the standard filename in the published root. Original CVs, research proposals, and duplicate downloads remain local reference inputs.
+
+### Rebuild after content changes
+
+```bash
+cd /data0/wangmingjun_homepage
+python3 tools/render_jemdoc.py index.jemdoc
+python3 tools/export_cv_publications.py /data0/mingjun_cv_overleaf/cv_publications.tex
+```
+
+In Overleaf, choose `main_forweb.tex` as the **Main document**, then compile and download the PDF. Locally, with a LaTeX installation, run `latexmk -pdf main_forweb.tex` and `latexmk -pdf main_forself.tex` from `/data0/mingjun_cv_overleaf`. Tectonic is also supported: `tectonic main_forweb.tex` and `tectonic main_forself.tex`. There is no bibliography build step for these two documents.
+
+```bash
+cd /data0/wangmingjun_homepage
+cp /data0/mingjun_cv_overleaf/main_forweb.pdf assets/cv.pdf
+python3 tools/check_site.py
+git diff --check
+git status --short
+```
+
+Update the PDF/CSS query-string version in `index.jemdoc`, the visible footer date, and `sitemap.xml` when making a new release, then render again. The publication count in `tools/check_site.py` is a release assertion: update it when intentionally adding/removing accepted papers. Check the CV and site together before staging.
+
+### Browser QA
+
+Install QA dependencies outside the public repository:
+
+```bash
+npm install --prefix /tmp/mingjun-browser-check playwright @axe-core/playwright
+PLAYWRIGHT_BROWSERS_PATH=/tmp/mingjun-browser-check/browsers /tmp/mingjun-browser-check/node_modules/.bin/playwright install chromium
+python3 -m http.server 8765 --bind 127.0.0.1
+```
+
+In another terminal:
+
+```bash
+cd /data0/wangmingjun_homepage
+NODE_PATH=/tmp/mingjun-browser-check/node_modules PLAYWRIGHT_BROWSERS_PATH=/tmp/mingjun-browser-check/browsers node tools/check_layout.cjs /tmp/mingjun-homepage-qa http://127.0.0.1:8765/
+```
+
+Screenshots and `layout-report.json` are written outside the repository. Use HTTP for axe testing; `file://` can cause stylesheet-fetch warnings even when the browser visually applies CSS. Stop the preview server with Ctrl+C after testing. Automated checks do not replace visual inspection or certify all accessibility requirements.
+
+### Publish and restore
+
+Stage only reviewed public files. `git add -u` stages changes to tracked files; explicitly add any new public scripts or assets. Never stage reference proposals, private CVs, or credentials. Commit and push to the source repository; do not edit the mirror independently. Verify the source Pages build, `Sync homepage mirror`, the actual mirror-push step, and the target Pages build. Missing mirror credentials now fail the sync workflow instead of producing a misleading green skipped run.
+
+After **Unpublish**, keep both Pages sources at `main` and `/ (root)` and create a new deployment by pushing a new commit. A no-op `git push` is insufficient. If no content has changed, `git commit --allow-empty -m "chore: republish homepage"` followed by `git push origin main` creates a trigger. If Google Search Console has an active temporary removal, cancel it before requesting indexing. Restoring the site does not instantly restore search results.
+
+The owner confirmed the master's GPA as **3.77/4.0** on 2026-11-02; both CVs and the website use this value with Top 5%. Public and personal CVs distinguish accepted papers, published articles, and manuscripts. The public site does not claim awarded funding or production signoff from a research proposal.
+
 ## 1. Repository Purpose
 
 This repository is the editable GitHub Pages source. Its preferred public address is:
@@ -94,15 +163,14 @@ Exclude:
 The homepage foregrounds:
 
 ```text
-AI4EDA · 3D IC Design Automation · Circuit Representation Learning · Fault Simulation
+LLM4EDA / AI4EDA · 3D IC
 ```
 
 The intended emphasis is:
 
-1. AI4EDA
-2. 3D IC design automation and industrial-grade 3D IC EDA design flows
-3. Circuit representation learning and multi-modal circuit data
-4. Fault simulation and functional safety
+1. LLM4EDA / AI4EDA: circuit representations, knowledge transfer, LLM-based verification and optimization, and tool-using agents.
+2. 3D IC design automation: legality-aware RTL-to-GDS flows, hybrid-bonding integration, early timing prediction, and setup/hold timing closure.
+3. Fault simulation and functional safety remain an engineering and research foundation supporting both primary directions.
 
 Fault simulation remains visible because it is an important foundation in the publication record and industry/research experience. The site now presents it as a strong supporting thread rather than the only central identity.
 
@@ -122,7 +190,7 @@ To publish or update the CV:
 cd /data0/wangmingjun_homepage
 cp "/path/to/latest_cv.pdf" assets/cv.pdf
 python3 tools/render_jemdoc.py index.jemdoc
-git add -A
+git add -u
 git commit -m "docs: update public cv"
 git push -u origin main
 ```
@@ -337,7 +405,7 @@ After editing:
 cd /data0/wangmingjun_homepage
 python3 tools/render_jemdoc.py index.jemdoc
 git status
-git add -A
+git add -u
 git commit -m "fix: refine homepage layout and research narrative"
 git push -u origin main
 ```
@@ -377,7 +445,7 @@ edit index.jemdoc
 python3 tools/render_jemdoc.py index.jemdoc
 python3 -m http.server 8000
 git status
-git add -A
+git add -u
 git commit -m "docs: update homepage content"
 git push -u origin main
 ```
@@ -387,7 +455,7 @@ For style-only updates:
 ```bash
 edit assets/main.css
 python3 tools/render_jemdoc.py index.jemdoc
-git add -A
+git add -u
 git commit -m "style: refine homepage layout"
 git push -u origin main
 ```
@@ -397,7 +465,7 @@ For CV updates:
 ```bash
 cp "/path/to/latest_cv.pdf" assets/cv.pdf
 python3 tools/render_jemdoc.py index.jemdoc
-git add -A
+git add -u
 git commit -m "docs: update public cv"
 git push -u origin main
 ```

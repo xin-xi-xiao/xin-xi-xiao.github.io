@@ -37,9 +37,9 @@ def render(source: Path) -> str:
     title = "Mingjun Wang"
     description = (
         "Mingjun Wang is a Ph.D. student in Computer Science and Engineering "
-        "at The Chinese University of Hong Kong, working on AI4EDA, "
-        "flow-oriented 3D IC EDA design automation, circuit representation "
-        "learning, and fault simulation."
+        "at The Chinese University of Hong Kong. His research focuses on "
+        "LLM4EDA / AI4EDA and 3D IC design automation, including circuit "
+        "learning, RTL-to-GDS flows, timing prediction, and fault simulation."
     )
     css_files: list[str] = []
     canonical_url = site_url()

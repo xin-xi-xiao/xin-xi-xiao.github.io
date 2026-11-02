@@ -30,8 +30,8 @@ jobs:
           MIRROR_TOKEN: ${{ secrets.HOMEPAGE_MIRROR_TOKEN }}
         run: |
           if [ -z "$MIRROR_TOKEN" ]; then
-            echo "enabled=false" >> "$GITHUB_OUTPUT"
-            echo "::notice::Mirror sync is ready but HOMEPAGE_MIRROR_TOKEN is not configured."
+            echo "::error::HOMEPAGE_MIRROR_TOKEN is missing; the mirror has NOT been updated."
+            exit 1
           else
             echo "enabled=true" >> "$GITHUB_OUTPUT"
           fi

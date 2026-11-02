@@ -1,5 +1,15 @@
 # Design Analysis
 
+## November 2026 Refinement
+
+- Two equally weighted research cards establish LLM4EDA / AI4EDA and 3D IC design automation. Fault simulation remains visible in a compact supporting row, the biography, experience, and publication record.
+- Remove the repeated hero keyword chips and repeated CV link; retain one concise research line and a clear PDF action.
+- Publication venue blocks are fixed at 72 by 72 px rather than stretching to the height of long author lists. Hide redundant blocks on mobile while retaining the venue and Conference/Journal labels.
+- Uniform 1 px publication borders replace role-specific decorative borders. Corresponding-author and equal-contribution symbols carry semantic meaning independently of color.
+- Darker venue colors improve white-text contrast; inline prose links gain underlines. Add keyboard skip navigation and sticky-header anchor offsets.
+- Skills use a stable label column and wrapping item area. Awards wrap within the viewport instead of requiring a 680 px-wide mobile table.
+- The website and both CVs share the same 21 publication records via a small HTML-parser-based LaTeX export tool. New acceptance announcements are dated by this homepage update, not asserted as the original notification dates.
+
 This note records the reference-page analysis used to redesign Mingjun Wang's academic homepage.
 
 ## Bei Yu Homepage

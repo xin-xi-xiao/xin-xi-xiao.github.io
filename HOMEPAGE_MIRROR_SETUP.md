@@ -11,20 +11,9 @@ The existing `xin-xi-xiao/xin-xi-xiao.github.io` repository remains the only edi
 
 ## Current Deployment Status
 
-Status verified on 2026-07-15:
+Configuration rechecked on 2026-11-02: both public repositories exist, both Pages configurations use `main` and `/`, HTTPS is enforced, the synchronization workflow is active, and the source repository has `HOMEPAGE_MIRROR_TOKEN`. Both sites had previously been unpublished. A configuration value of `status: built` alone is not proof that an unpublished site currently returns HTTP 200; verify the live URLs after a new deployment.
 
-- [x] Organization `Wang-Mingjun` created.
-- [x] Public repository `Wang-Mingjun/wang-mingjun.github.io` created.
-- [x] Account `xin-xi-xiao` granted Admin access to the target repository.
-- [x] Mirror workflow prepared locally in the source repository.
-- [x] Independent local Git remote `mirror` configured without changing `origin`.
-- [ ] Local source commits pushed to `xin-xi-xiao/xin-xi-xiao.github.io`.
-- [ ] Fine-grained mirror token created.
-- [ ] Source repository secret `HOMEPAGE_MIRROR_TOKEN` configured.
-- [ ] First mirror workflow completed successfully.
-- [ ] Target GitHub Pages enabled and returning HTTP 200.
-
-Current remote checks show that the target repository exists but is empty and its Pages endpoint returns 404. This is expected until the first synchronization and Pages activation are complete. The existing homepage returns HTTP 200 and remains unaffected.
+The setup steps below are retained for rebuilding the arrangement, not as evidence that initial setup is still pending. For each release verify the source Pages deployment, the actual `Push the mirror` step, the mirror Pages deployment, and `.source-commit`. Since November 2026 a missing mirror token fails the workflow rather than silently skipping synchronization.
 
 ## 1. Design and Safety Properties
 
@@ -175,7 +164,7 @@ git pull --ff-only
 # Edit index.jemdoc and/or assets/main.css.
 python3 tools/render_jemdoc.py index.jemdoc
 
-git add -A
+git add -u
 git commit -m "docs: update homepage"
 git push -u origin main
 ```
