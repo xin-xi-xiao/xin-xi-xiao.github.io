@@ -78,6 +78,12 @@ The owner also confirmed that **MigSizer remains accepted**. The 21-paper total 
 
 Scholarship-specific Chinese documents and source evidence are maintained **outside this public repository**. The local application input PDFs and DOCX are ignored; do not force-add them. The two general-purpose English CVs retain their existing audience and layout, without importing application strategy or confidential project material.
 
+The November 3 audit adds the team-track Third Prize and UCAS Merit Student honors,
+and aligns the MOE-Huawei Future Star and UCAS Academic Scholarship names with the
+provided Chinese research application. The comprehensive Chinese CV is maintained at
+`/data0/mingjun_tencent_scholarship_20261103/`; it is not a public site asset.
+Keep the earlier three-page application version separate from the new full version.
+
 ## 1. Repository Purpose
 
 This repository is the editable GitHub Pages source. Its preferred public address is:
