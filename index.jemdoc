@@ -34,7 +34,7 @@
         <a href="https://scholar.google.com/citations?user=E9aUbvAAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a>
         <a href="https://github.com/xin-xi-xiao" target="_blank" rel="noopener">GitHub</a>
       </div>
-      <a class="primary-button" href="assets/cv.pdf?v=20261103" target="_blank" rel="noopener">CV (PDF)</a>
+      <a class="primary-button" href="assets/cv.pdf?v=20261103b" target="_blank" rel="noopener">CV (PDF)</a>
     </div>
     <aside class="hero-side" aria-label="Profile portrait and affiliations">
       <img class="portrait-card" src="assets/photo.jpg?v=20260713a" alt="Portrait of Mingjun Wang" width="132" height="185" />
@@ -76,7 +76,7 @@
     <div class="focus-grid">
       <article class="focus-card">
         <h3>LLM4EDA / AI4EDA</h3>
-        <p>Multi-modal circuit learning, knowledge distillation, and LLM-based verification and optimization. I study how models use circuit structure and tool feedback to make effective design decisions.</p>
+        <p>Multi-modal circuit learning, knowledge distillation, and LLM-based verification and optimization. I study tool-feedback-driven decisions and evaluate agents by verified design improvements under fixed budgets.</p>
         <p class="focus-links"><a href="#pub-circuitnet">CircuitNet 3.0</a> · <a href="#pub-rtldistil">RTLDistil</a> · <a href="#pub-chatfcm">ChatFCM</a></p>
       </article>
       <article class="focus-card">
@@ -458,7 +458,7 @@
     <blockquote>I welcome collaborations on LLM4EDA / AI4EDA and 3D IC design automation, especially tool-using agents, circuit learning, RTL-to-GDS flows, and timing closure. I also work on fault simulation and hardware verification.</blockquote>
     <p>Email: <a href="mailto:wangmingjun000613@gmail.com">wangmingjun000613@gmail.com</a> · <a href="mailto:mjwang25@cse.cuhk.edu.hk">mjwang25@cse.cuhk.edu.hk</a></p>
     <p>CUHK · Department of Computer Science and Engineering · Advisor: <a href="https://www.cse.cuhk.edu.hk/~byu/" target="_blank" rel="noopener">Prof. Bei Yu</a></p>
-    <p><a href="https://scholar.google.com/citations?user=E9aUbvAAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a> · <a href="https://github.com/xin-xi-xiao" target="_blank" rel="noopener">GitHub</a> · <a href="assets/cv.pdf?v=20261103" target="_blank" rel="noopener">CV</a></p>
+    <p><a href="https://scholar.google.com/citations?user=E9aUbvAAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a> · <a href="https://github.com/xin-xi-xiao" target="_blank" rel="noopener">GitHub</a> · <a href="assets/cv.pdf?v=20261103b" target="_blank" rel="noopener">CV</a></p>
   </section>
 </main>
 

@@ -20,6 +20,7 @@ The editable source remains this repository. The preferred website is `https://w
 | `backups/20261102-before-refresh/` in the Overleaf checkout | Byte-identical original `main_forweb.tex` and `main_forself.tex`; never publish this folder |
 | `assets/cv.pdf` | Compiled **public** PDF served by both websites |
 | `tools/check_site.py` | Offline content/build checks; requires Python 3 and `pdftotext` (Poppler) |
+| `tools/test_cv_export.py` | Tests LaTeX URL export and checks actual PDF link annotations with Poppler `pdfinfo -url` |
 | `tools/check_layout.cjs` | Optional browser/accessibility checks using Playwright and axe |
 | `googleeb48c6bcf48b80a4.html` | Exact Google verification endpoint; do not rename or wrap in site HTML |
 
@@ -41,6 +42,7 @@ In Overleaf, choose `main_forweb.tex` as the **Main document**, then compile and
 cd /data0/wangmingjun_homepage
 cp /data0/mingjun_cv_overleaf/main_forweb.pdf assets/cv.pdf
 python3 tools/check_site.py
+python3 tools/test_cv_export.py --pdf assets/cv.pdf --pdf /data0/mingjun_cv_overleaf/main_forself.pdf
 git diff --check
 git status --short
 ```
@@ -83,6 +85,14 @@ and aligns the MOE-Huawei Future Star and UCAS Academic Scholarship names with t
 provided Chinese research application. The comprehensive Chinese CV is maintained at
 `/data0/mingjun_tencent_scholarship_20261103/`; it is not a public site asset.
 Keep the earlier three-page application version separate from the new full version.
+
+The November 3 screenshot follow-up updates private manuscript records and their
+author contributions, without adding under-review papers to the public page or
+public CV. The public research description now emphasizes fixed-budget agent
+evaluation and independently verified design improvements. The CV export now uses
+URL-specific escaping: ordinary LaTeX text escaping previously introduced `{}`
+after `~` in some institutional PDF links. Check compiled PDF targets, not just
+the appearance of the linked text.
 
 ## 1. Repository Purpose
 

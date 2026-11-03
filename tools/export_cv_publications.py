@@ -4,6 +4,7 @@
 import argparse
 from html.parser import HTMLParser
 from pathlib import Path
+from urllib.parse import quote
 
 
 class Publications(HTMLParser):
@@ -53,6 +54,13 @@ def tex(value):
     return "".join(escapes.get(char, char) for char in value)
 
 
+def tex_url(value):
+    # Text glyph macros (especially \textasciitilde{}) alter PDF link targets.
+    encoded = quote(value, safe=":/?#[]@!$&'()*+,;=%~_-.")
+    escapes = {"&": r"\&", "%": r"\%", "$": r"\$", "#": r"\#", "_": r"\_"}
+    return "".join(escapes.get(char, char) for char in encoded)
+
+
 def export(source, output):
     parser = Publications()
     parser.feed(source.read_text(encoding="utf-8"))
@@ -88,7 +96,7 @@ def export(source, output):
                 honors = ""
             title = tex(record["title"])
             if record["link"]:
-                title = r"\href{" + tex(record["link"]) + "}{" + title + "}"
+                title = r"\href{" + tex_url(record["link"]) + "}{" + title + "}"
             lines.append(r"\publication{" + title + "}{" + authors + "}{" + tex(meta) + "}{" + tex(honors) + "}")
     output.write_text("\n\n".join(lines) + "\n", encoding="utf-8")
     print(f"Exported {len(parser.records)} publications to {output}")
