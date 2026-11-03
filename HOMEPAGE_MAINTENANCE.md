@@ -94,6 +94,11 @@ URL-specific escaping: ordinary LaTeX text escaping previously introduced `{}`
 after `~` in some institutional PDF links. Check compiled PDF targets, not just
 the appearance of the linked text.
 
+The later research-profile refinement adds domain-adaptive continued pretraining,
+SFT, and tool-feedback reinforcement learning as research interests, alongside
+circuit representation learning and 3D IC implementation. It does not claim
+completed model training or disclose corporate project arrangements or budgets.
+
 ## 1. Repository Purpose
 
 This repository is the editable GitHub Pages source. Its preferred public address is:
