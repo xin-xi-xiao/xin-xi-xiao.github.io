@@ -59,6 +59,8 @@ The November 2026 update presents **LLM4EDA / AI4EDA** and **3D IC design automa
 
 Google's verification endpoint is `googleeb48c6bcf48b80a4.html`. The downloaded `googleeb48c6bcf48b80a4 (1).html` has identical content and is retained locally, not published as a second endpoint. Canonical and sitemap URLs remain `https://wang-mingjun.github.io/`.
 
+Bing's XML verification endpoint is `https://wang-mingjun.github.io/BingSiteAuth.xml`. Keep `BingSiteAuth.xml` at the repository root with its original verification value, including after verification succeeds. The existing mirror workflow publishes it to both sites; no HTML meta tag or DNS change is needed for this method.
+
 Optional browser checks use `tools/check_layout.cjs` with Playwright and `@axe-core/playwright`; see the maintenance guide for installation and invocation. They cover 320, 375, 768, and 1440 px layouts, image loading, anchor visibility, uniform publication borders, and automated accessibility checks.
 
 The compact `WM` chip/AI mark has two roles: the complete mark appears beside the navigation name, while a circular variant is published at the stable root path `favicon.png` for browser tabs and Google Search results. The normalized square master is `assets/brand-mark-512.png`; smaller files in `assets/` are purpose-sized for browser and device displays.

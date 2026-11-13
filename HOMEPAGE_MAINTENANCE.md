@@ -23,6 +23,7 @@ The editable source remains this repository. The preferred website is `https://w
 | `tools/test_cv_export.py` | Tests LaTeX URL export and checks actual PDF link annotations with Poppler `pdfinfo -url` |
 | `tools/check_layout.cjs` | Optional browser/accessibility checks using Playwright and axe |
 | `googleeb48c6bcf48b80a4.html` | Exact Google verification endpoint; do not rename or wrap in site HTML |
+| `BingSiteAuth.xml` | Bing XML verification endpoint at the published root; retain its filename and verification value |
 
 The Google file downloaded with ` (1)` is byte-identical to the existing standard-named file. Keep the standard filename in the published root. Original CVs, research proposals, and duplicate downloads remain local reference inputs.
 
@@ -461,6 +462,17 @@ https://wang-mingjun.github.io/googleeb48c6bcf48b80a4.html
 In Search Console, choose **HTML file** for this supplied file. If you instead choose **HTML tag**, Google will give you a different `<meta name="google-site-verification" ...>` value; add that exact tag to `tools/render_jemdoc.py` before the canonical link, rebuild, and deploy.
 
 After verification, use **URL inspection** for `https://wang-mingjun.github.io/` and select **Request indexing**. The repository also publishes `robots.txt` and `sitemap.xml`, both of which identify the same canonical URL. Requesting indexing asks Google to crawl the page; it does not guarantee an immediate ranking or inclusion.
+
+## 14.2 Bing Webmaster Tools
+
+For `https://wang-mingjun.github.io/`, use **XML File** verification. The supplied `/data3/BingSiteAuth.xml` is published as the root-level `BingSiteAuth.xml`, not under `assets/` and not embedded in `index.jemdoc`.
+
+1. Commit the verification file and push to `origin/main`. The existing mirror workflow copies it to `Wang-Mingjun/wang-mingjun.github.io` automatically.
+2. Wait for the mirror synchronization and Pages deployment to succeed. Check that `https://wang-mingjun.github.io/BingSiteAuth.xml` returns HTTP 200 with the XML verification value, not an HTML error page.
+3. Return to Bing Webmaster Tools and click **Verify** for the same site URL. Publishing the file alone does not complete the account-side verification.
+4. After successful verification, submit `https://wang-mingjun.github.io/sitemap.xml` under **Sitemaps** if it has not already been submitted.
+
+Keep `BingSiteAuth.xml` after verification so Bing can recheck ownership. Preserve the filename's capitalization and XML content. This method does not require a CNAME record, a custom domain, or changes to Google verification or the homepage. Do not add the verification file to the sitemap; `tools/check_site.py` checks it separately.
 
 ## 15. Recommended Update Workflow
 

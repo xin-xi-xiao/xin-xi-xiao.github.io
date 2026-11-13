@@ -80,6 +80,13 @@ check((ROOT / "googleeb48c6bcf48b80a4.html").read_text().strip() == "google-site
 duplicate = ROOT / "googleeb48c6bcf48b80a4 (1).html"
 if duplicate.exists():
     check(duplicate.read_bytes() == (ROOT / "googleeb48c6bcf48b80a4.html").read_bytes(), "Downloaded verification file differs from public file")
+try:
+    bing = ET.parse(ROOT / "BingSiteAuth.xml").getroot()
+    check(bing.tag == "users" and [child.tag for child in bing] == ["user"]
+          and bing.findtext("user") == "3561CE51F4036B1DDB7C303457ED3D99",
+          "Incorrect Bing verification file")
+except (OSError, ET.ParseError) as error:
+    check(False, f"Cannot read Bing verification file: {error}")
 check("Disallow: /" not in (ROOT / "robots.txt").read_text(), "robots.txt blocks the website")
 tree = ET.parse(ROOT / "sitemap.xml")
 check(tree.findtext("{*}url/{*}loc") == "https://wang-mingjun.github.io/", "Incorrect sitemap URL")
@@ -121,4 +128,4 @@ for word in ["18518983880", "DistillTune", "ADAPT:", "CN119272672A"]:
 
 if errors:
     raise SystemExit("FAILED:\n" + "\n".join("- " + error for error in errors))
-print("PASS: render, HTML, assets, anchors, metadata, Google verification, 21 publications, public CV and content boundaries")
+print("PASS: render, HTML, assets, anchors, metadata, Google/Bing verification, 21 publications, public CV and content boundaries")
