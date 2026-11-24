@@ -26,7 +26,11 @@ class ExportTests(unittest.TestCase):
             path = Path(directory) / "papers.tex"
             export(ROOT / "index.jemdoc", path)
             result = path.read_text()
-        self.assertEqual(result.count(r"\publication{"), 21)
+        self.assertEqual(result.count(r"\publication{"), 22)
+        self.assertIn(r"\href{https://arxiv.org/abs/2611.11475}{CU-3D:", result)
+        spectra = next(line for line in result.splitlines() if "SPECTRA-3D" in line)
+        self.assertIn(r"Guanqi Li\textsuperscript{\dag}, \textbf{Mingjun Wang}\textsuperscript{\dag}, Siqi Hong", spectra)
+        self.assertIn("Dresden", spectra)
         self.assertIn(r"\href{https://www.cse.cuhk.edu.hk/~byu/", result)
         self.assertNotIn(r"\href{https://www.cse.cuhk.edu.hk/\textasciitilde", result)
 

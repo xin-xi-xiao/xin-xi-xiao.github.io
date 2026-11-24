@@ -258,10 +258,11 @@ h3 {
 
 .logo-frame {
   width: 42px;
-  height: 42px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  grid-template-rows: 42px auto;
+  place-items: center;
+  white-space: nowrap;
+  font-size: 12px;
 }
 
 .logo-frame img {
@@ -270,6 +271,15 @@ h3 {
   max-width: 34px;
   max-height: 34px;
   object-fit: contain;
+}
+
+/* Match the oval emblem's visible height to the crest and round seal. */
+.logo-frame .ict-mark,
+.edu-item img.ict-mark {
+  width: 42px;
+  height: auto;
+  max-width: 100%;
+  max-height: none;
 }
 
 .quote {
@@ -293,11 +303,19 @@ h3 {
 }
 
 .news-box p {
-  margin: 0 0 8px;
+  display: grid;
+  grid-template-columns: 8ch minmax(0, 1fr);
+  gap: 10px;
+  margin: 0;
+  padding: 5px 0;
 }
 
-.news-box p:last-child {
-  margin-bottom: 0;
+.news-box time {
+  align-self: baseline;
+  color: #67532A;
+  font-size: var(--fs-meta);
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
 }
 
 .focus-grid {
@@ -358,6 +376,7 @@ h3 {
 }
 
 .edu-item img {
+  justify-self: center;
   width: 34px;
   height: 34px;
   object-fit: contain;
@@ -394,6 +413,29 @@ h3 {
   display: grid;
   gap: var(--space-card);
 }
+
+.pub-index {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+  align-items: baseline;
+  justify-content: space-between;
+  font-size: var(--fs-meta);
+}
+
+.pub-index nav {
+  display: flex;
+  gap: 16px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.pub-index a, .pub-links a, .news-box a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.equal-note { margin: 0; }
 
 .pub-year {
   display: flex;
@@ -493,21 +535,28 @@ h3 {
   color: #654187;
 }
 
-.badge-icml { background: var(--badge-icml); }
-.badge-iclr { background: var(--badge-iclr); }
-.badge-dac { background: var(--badge-dac); }
-.badge-iccad { background: var(--badge-iccad); }
-.badge-aspdac { background: var(--badge-aspdac); }
-.badge-tcad { background: var(--badge-tcad); }
-.badge-iseda { background: var(--badge-iseda); }
-.badge-itc { background: var(--badge-itc); }
-.badge-iccd { background: var(--badge-iccd); }
+.badge-icml { --venue-color: var(--badge-icml); background: var(--venue-color); }
+.badge-iclr { --venue-color: var(--badge-iclr); background: var(--venue-color); }
+.badge-dac { --venue-color: var(--badge-dac); background: var(--venue-color); }
+.badge-iccad { --venue-color: var(--badge-iccad); background: var(--venue-color); }
+.badge-aspdac { --venue-color: var(--badge-aspdac); background: var(--venue-color); }
+.badge-tcad { --venue-color: var(--badge-tcad); background: var(--venue-color); }
+.badge-iseda { --venue-color: var(--badge-iseda); background: var(--venue-color); }
+.badge-itc { --venue-color: var(--badge-itc); background: var(--venue-color); }
+.badge-iccd { --venue-color: var(--badge-iccd); background: var(--venue-color); }
+.badge-date { --venue-color: #35626C; background: var(--venue-color); }
 
 .authors,
 .meta,
 .desc {
   margin: 7px 0 0;
   font-size: var(--fs-meta);
+}
+
+.venue-block {
+  background: var(--c-bg-soft);
+  background: color-mix(in srgb, var(--venue-color) 9%, white);
+  color: var(--venue-color);
 }
 
 .pub-card h3,
@@ -669,9 +718,9 @@ h3 {
   }
 
   .nav-links {
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
+    gap: 4px 12px;
     width: 100%;
-    overflow-x: auto;
     white-space: nowrap;
   }
 

@@ -93,16 +93,16 @@ check(tree.findtext("{*}url/{*}loc") == "https://wang-mingjun.github.io/", "Inco
 
 publications = Publications()
 publications.feed(html)
-check(len(publications.records) == 21, "Expected 21 accepted/published papers")
-check(collections.Counter(p["type"] for p in publications.records) == {"Conference": 19, "Journal": 2}, "Incorrect Conference/Journal counts")
-check(len({p["title"] for p in publications.records}) == 21, "Duplicate publication")
+check(len(publications.records) == 22, "Expected 22 accepted/published papers")
+check(collections.Counter(p["type"] for p in publications.records) == {"Conference": 20, "Journal": 2}, "Incorrect Conference/Journal counts")
+check(len({p["title"] for p in publications.records}) == 22, "Duplicate publication")
 check(all("Mingjun Wang" in p["authors"] for p in publications.records), "Missing author on a paper")
 check(all(p["link"].startswith("https://") for p in publications.records), "Publication lacks a public record link")
-check(sum(p["authors"].startswith("Mingjun Wang") or "Mingjun Wang†" in p["authors"] for p in publications.records) == 12, "Expected 12 first/co-first-author papers")
+check(sum(p["authors"].startswith("Mingjun Wang") or "Mingjun Wang†" in p["authors"] for p in publications.records) == 13, "Expected 13 first/co-first-author papers")
 check(any(p["title"].startswith("MigSizer:") for p in publications.records), "Confirmed accepted MigSizer paper is missing")
 survey = next(p for p in publications.records if p["title"].startswith("LLM-Assisted Circuit Verification:"))
 check("Invited Paper" in survey["honors"], "ASP-DAC 2026 survey invitation is missing")
-check(len(re.findall(r'<p class="authors">.*?<strong>Mingjun Wang[†‡]?</strong>', html)) == 21, "Owner not bold in every paper")
+check(len(re.findall(r'<p class="authors">.*?<strong>Mingjun Wang[†‡]?</strong>', html)) == 22, "Owner not bold in every paper")
 hoist = next(p for p in publications.records if p["title"].startswith("HOIST:"))
 check("Mingjun Wang‡" in hoist["authors"] and "Binwu Zhu‡" in hoist["authors"] and "Mingjun Wang†" not in hoist["authors"], "Incorrect HOIST corresponding-author marks")
 domsim = next(p for p in publications.records if p["title"].startswith("DomSim:"))
@@ -119,7 +119,7 @@ for word in ["DistillTune", "ADAPT:", "Graph World Models", "Patents", "18518983
 cv_text = subprocess.check_output(["pdftotext", str(ROOT / "assets/cv.pdf"), "-"], text=True)
 cv_text = unicodedata.normalize("NFKC", cv_text)
 check("3.77/4.0" in cv_text and "3.78/4.0" not in cv_text, "Public CV GPA differs from the owner's confirmed value")
-for name in ["CU-3D:", "HOIST:", "Distill3D:", "MigSizer:", "LLM4EDA / AI4EDA", "Co-corresponding"]:
+for name in ["SPECTRA-3D", "CU-3D:", "HOIST:", "Distill3D:", "MigSizer:", "LLM4EDA / AI4EDA", "Co-corresponding"]:
     check(name in cv_text, f"Public CV missing {name}")
 for award in ["Third Prize, Team Competition", "Merit Student", "Future Star"]:
     check(award in cv_text, f"Public CV missing audited award: {award}")
@@ -128,4 +128,4 @@ for word in ["18518983880", "DistillTune", "ADAPT:", "CN119272672A"]:
 
 if errors:
     raise SystemExit("FAILED:\n" + "\n".join("- " + error for error in errors))
-print("PASS: render, HTML, assets, anchors, metadata, Google/Bing verification, 21 publications, public CV and content boundaries")
+print("PASS: render, HTML, assets, anchors, metadata, Google/Bing verification, 22 publications, public CV and content boundaries")

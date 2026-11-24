@@ -55,7 +55,7 @@ python3 tools/export_cv_publications.py /data0/mingjun_cv_overleaf/cv_publicatio
 
 Compile the public CV, replace `assets/cv.pdf`, update its cache version in `index.jemdoc`, render, test, and push. Do not upload the full personal CV or source proposals to the public site. Stage newly added public assets explicitly rather than using `git add -A`.
 
-The November 2026 update presents **LLM4EDA / AI4EDA** and **3D IC design automation** as two primary directions, with fault simulation as a supporting research foundation. Publications are ordered by year, with first/co-first-author papers before other collaborations; `†` marks equal contribution and `‡` marks co-corresponding authors. There are 21 accepted/published entries: 19 conference papers and 2 journal articles. Future venue years denote accepted upcoming papers, not completed presentations.
+The November 2026 update presents **LLM4EDA / AI4EDA** and **3D IC design automation** as two primary directions, with fault simulation as a supporting research foundation. Publications are ordered by year, with first/co-first-author papers before other collaborations; `†` marks equal contribution and `‡` marks co-corresponding authors. There are 22 accepted/published entries: 20 conference papers and 2 journal articles. Future venue years denote accepted upcoming papers, not completed presentations.
 
 Google's verification endpoint is `googleeb48c6bcf48b80a4.html`. The downloaded `googleeb48c6bcf48b80a4 (1).html` has identical content and is retained locally, not published as a second endpoint. Canonical and sitemap URLs remain `https://wang-mingjun.github.io/`.
 

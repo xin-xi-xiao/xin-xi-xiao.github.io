@@ -19,7 +19,7 @@
   <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png?v=20260716" />
   <link rel="canonical" href="https://wang-mingjun.github.io/" />
   <title>Mingjun Wang</title>
-  <link rel="stylesheet" href="assets/main.css?v=20261102" type="text/css" />
+  <link rel="stylesheet" href="assets/main.css?v=20261124" type="text/css" />
 </head>
 <body>
 <a class="skip-link" href="#about">Skip to content</a>
@@ -44,7 +44,7 @@
   <section class="hero container">
     <div class="hero-main">
       <h1>Mingjun Wang</h1>
-      <p class="subtitle">Ph.D. Student · Department of Computer Science and Engineering · The Chinese University of Hong Kong</p>
+      <p class="subtitle">Ph.D. Student · Department of Computer Science and Engineering<br />The Chinese University of Hong Kong</p>
       <p class="tagline">LLM4EDA / AI4EDA <span aria-hidden="true">·</span> 3D IC</p>
       <p class="hero-bio">
         I develop learning methods and design flows for integrated circuits, connecting circuit representation learning and LLM-based automation with 3D physical implementation. My work spans early-stage timing prediction, RTL-to-GDS flows, and efficient fault simulation.
@@ -54,16 +54,15 @@
         <a href="https://scholar.google.com/citations?user=E9aUbvAAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a>
         <a href="https://github.com/xin-xi-xiao" target="_blank" rel="noopener">GitHub</a>
       </div>
-      <a class="primary-button" href="assets/cv.pdf?v=20261103c" target="_blank" rel="noopener">CV (PDF)</a>
+      <a class="primary-button" href="assets/cv.pdf?v=20261124" target="_blank" rel="noopener">CV (PDF)</a>
     </div>
     <aside class="hero-side" aria-label="Profile portrait and affiliations">
       <img class="portrait-card" src="assets/photo.jpg?v=20260713a" alt="Portrait of Mingjun Wang" width="132" height="185" />
       <div class="affiliation-logos">
-        <span class="logo-frame"><img src="assets/cuhk.png" alt="CUHK logo" /></span>
-        <span class="logo-frame"><img src="assets/ict.svg" alt="ICT CAS logo" /></span>
-        <span class="logo-frame"><img src="assets/pku.png" alt="Peking University logo" /></span>
+        <span class="logo-frame"><img src="assets/cuhk.png" alt="" /><span>CUHK</span></span>
+        <span class="logo-frame"><img class="ict-mark" src="assets/ict.svg?v=20261124" alt="" /><span>ICT, CAS</span></span>
+        <span class="logo-frame"><img src="assets/pku.png" alt="" /><span>PKU</span></span>
       </div>
-      <p>CUHK · ICT, CAS · PKU</p>
       <p class="quote">Careful research, practical systems, useful tools.</p>
     </aside>
   </section>
@@ -80,14 +79,14 @@
   <section id="news" class="section container">
     <h2>News</h2>
     <div class="news-box">
-      <p><strong>2026/11</strong> · ASP-DAC 2027: CU-3D is an invited paper; HOIST and Logic Resynthesis for Cross-Die Dependencies are accepted. I am a co-corresponding author of HOIST.</p>
-      <p><strong>2026/11</strong> · MigSizer is accepted at ICCD 2026 for physical-aware analog/RF circuit migration.</p>
-      <p><strong>2026/07</strong> · ICCAD 2026: Distill3D, LibPilot, and ChatFCM accepted.</p>
-      <p><strong>2026/05</strong> · IEEE TCAD Early Access: "Bit-Compressed Concurrent Fault Simulation with Efficient Fault List" is online.</p>
-      <p><strong>2026/05</strong> · ICML 2026: AnalogVerifier accepted.</p>
-      <p><strong>2026/04</strong> · ICLR 2026: CircuitNet 3.0 accepted as a poster paper.</p>
-      <p><strong>2026/04</strong> · DAC 2026: ATLAS accepted for FIT prediction with asynchronous topological learning.</p>
-      <p><strong>2025/12</strong> · 2nd Place at EDAthon 2025, Programming Competition on Electronic Design Automation.</p>
+      <p><time datetime="2026-11">2026/11</time><span><a href="#pub-spectra3d">SPECTRA-3D</a>, our work on timing-aware tier partitioning, was accepted at DATE 2027.</span></p>
+      <p><time datetime="2026-11">2026/11</time><span>ASP-DAC 2027: CU-3D is an invited paper; HOIST and Logic Resynthesis for Cross-Die Dependencies are accepted. I am a co-corresponding author of HOIST.</span></p>
+      <p><time datetime="2026-11">2026/11</time><span>MigSizer is accepted at ICCD 2026 for physical-aware analog/RF circuit migration.</span></p>
+      <p><time datetime="2026-07">2026/07</time><span>ICCAD 2026: Distill3D, LibPilot, and ChatFCM accepted.</span></p>
+      <p><time datetime="2026-05">2026/05</time><span>IEEE TCAD Early Access: "Bit-Compressed Concurrent Fault Simulation with Efficient Fault List" is online.</span></p>
+      <p><time datetime="2026-05">2026/05</time><span>ICML 2026: AnalogVerifier accepted.</span></p>
+      <p><time datetime="2026-04">2026/04</time><span>ICLR 2026: CircuitNet 3.0 accepted as a poster paper.</span></p>
+      <p><time datetime="2026-04">2026/04</time><span>DAC 2026: ATLAS accepted for FIT prediction with asynchronous topological learning.</span></p>
     </div>
   </section>
 
@@ -102,7 +101,7 @@
       <article class="focus-card">
         <h3>3D IC Design Automation</h3>
         <p>Legality-aware RTL-to-GDS flows, hybrid-bonding integration, and cross-stage timing prediction. I connect physical implementation with post-route analysis and setup/hold timing closure.</p>
-        <p class="focus-links"><a href="#pub-cu3d">CU-3D</a> · <a href="#pub-distill3d">Distill3D</a> · <a href="#pub-resynthesis">3D Logic Resynthesis</a></p>
+        <p class="focus-links"><a href="#pub-cu3d">CU-3D</a> · <a href="#pub-distill3d">Distill3D</a> · <a href="#pub-spectra3d">SPECTRA-3D</a></p>
       </article>
       <article class="focus-card focus-support">
         <h3>Fault Simulation and Functional Safety</h3>
@@ -124,7 +123,7 @@
         </div>
       </article>
       <article class="edu-item">
-        <img src="assets/ict.svg" alt="ICT CAS logo" />
+        <img class="ict-mark" src="assets/ict.svg?v=20261124" alt="ICT CAS logo" />
         <div>
           <div class="edu-head"><strong>University of Chinese Academy of Sciences &amp; ICT, CAS</strong><span>2022 — 2025</span></div>
           <p>M.Eng. in Electronic Information · GPA 3.77/4.0 (Top 5%)</p>
@@ -143,9 +142,12 @@
 
   <section id="publications" class="section container">
     <h2>Selected Publications</h2>
-    <p class="equal-note">† Equal contribution. ‡ Co-corresponding authors.</p>
+    <div class="pub-index">
+      <nav aria-label="Publications by year"><a href="#papers-2027">2027</a><a href="#papers-2026">2026</a><a href="#papers-2025">2025</a><a href="#papers-2024">2024</a></nav>
+      <p class="equal-note">† Equal contribution. ‡ Co-corresponding authors.</p>
+    </div>
     <div class="pub-list">
-      <div class="pub-year" aria-label="Publications from 2027"><span>2027</span></div>
+      <div class="pub-year" id="papers-2027"><span>2027</span></div>
       <article class="pub-card" id="pub-cu3d">
         <div class="venue-block badge-aspdac" aria-hidden="true">ASP-DAC</div>
         <div class="pub-body">
@@ -153,8 +155,20 @@
           <h3>CU-3D: A Scalable Legality-Aware RTL-to-GDS Flow for 3D-IC Physical Design</h3>
           <p class="authors"><strong>Mingjun Wang</strong>, Guanqi Li, Yihan Wen, Lancheng Zou, Mingjun Li, Feng Gu, Fengrui Liu, Jianan Mu, Yuxuan Zhao, Tsung-Yi Ho, Huawei Li, Sung Kyu Lim, Bei Yu.</p>
           <p class="meta">IEEE/ACM Asia and South Pacific Design Automation Conference · Tokyo, Jan. 25–28, 2027.</p>
-          <p class="desc">A scalable RTL-to-GDS flow that integrates physical legality into 3D IC implementation.</p>
-          <div class="pub-links"><a href="https://www.cse.cuhk.edu.hk/~byu/publications.html" target="_blank" rel="noopener">Publication record</a></div>
+          <p class="desc">Plans hybrid bonds for data, clock and power networks together, then preserves those assignments through clock synthesis and routing.</p>
+          <div class="pub-links"><a href="https://arxiv.org/abs/2611.11475" target="_blank" rel="noopener">arXiv:2611.11475</a><a href="https://www.cse.cuhk.edu.hk/~byu/publications.html" target="_blank" rel="noopener">Publication record</a></div>
+        </div>
+      </article>
+
+      <article class="pub-card" id="pub-spectra3d">
+        <div class="venue-block badge-date" aria-hidden="true">DATE</div>
+        <div class="pub-body">
+          <span class="venue badge-date">DATE 2027</span><span class="type-badge conference">Conference</span><span class="role-badge">Co-first †</span>
+          <h3>SPECTRA-3D HBT-Constrained Timing-Aware Tier Partitioning via Adaptive Spectral Optimization</h3>
+          <p class="authors">Guanqi Li†, <strong>Mingjun Wang†</strong>, Siqi Hong, Jiaxi Zhang, Bei Yu, Jing Ye, Jianan Mu, Huawei Li.</p>
+          <p class="meta">IEEE/ACM Design, Automation and Test in Europe Conference (DATE) · Dresden, Mar. 22–24, 2027.</p>
+          <p class="desc">Uses adaptive spectral optimization to partition a 3D IC across tiers under timing and HBT constraints.</p>
+          <div class="pub-links"><a href="https://www.cse.cuhk.edu.hk/~byu/publications.html" target="_blank" rel="noopener">Publication record [C414]</a></div>
         </div>
       </article>
 
@@ -182,7 +196,7 @@
         </div>
       </article>
 
-      <div class="pub-year" aria-label="Publications from 2026"><span>2026</span></div>
+      <div class="pub-year" id="papers-2026"><span>2026</span></div>
       <article class="pub-card" id="pub-distill3d">
         <div class="venue-block badge-iccad">ICCAD</div>
         <div class="pub-body">
@@ -303,7 +317,7 @@
         </div>
       </article>
 
-      <div class="pub-year" aria-label="Publications from 2025"><span>2025</span></div>
+      <div class="pub-year" id="papers-2025"><span>2025</span></div>
       <article class="pub-card" id="pub-rtldistil">
         <div class="venue-block badge-icml">ICML</div>
         <div class="pub-body">
@@ -376,7 +390,7 @@
         </div>
       </article>
 
-      <div class="pub-year" aria-label="Publications from 2024"><span>2024</span></div>
+      <div class="pub-year" id="papers-2024"><span>2024</span></div>
       <article class="pub-card">
         <div class="venue-block badge-itc">ITC-Asia</div>
         <div class="pub-body">
@@ -478,7 +492,7 @@
     <blockquote>I welcome collaborations on LLM4EDA / AI4EDA and 3D IC design automation, especially tool-using agents, circuit learning, RTL-to-GDS flows, and timing closure. I also work on fault simulation and hardware verification.</blockquote>
     <p>Email: <a href="mailto:wangmingjun000613@gmail.com">wangmingjun000613@gmail.com</a> · <a href="mailto:mjwang25@cse.cuhk.edu.hk">mjwang25@cse.cuhk.edu.hk</a></p>
     <p>CUHK · Department of Computer Science and Engineering · Advisor: <a href="https://www.cse.cuhk.edu.hk/~byu/" target="_blank" rel="noopener">Prof. Bei Yu</a></p>
-    <p><a href="https://scholar.google.com/citations?user=E9aUbvAAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a> · <a href="https://github.com/xin-xi-xiao" target="_blank" rel="noopener">GitHub</a> · <a href="assets/cv.pdf?v=20261103c" target="_blank" rel="noopener">CV</a></p>
+    <p><a href="https://scholar.google.com/citations?user=E9aUbvAAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a> · <a href="https://github.com/xin-xi-xiao" target="_blank" rel="noopener">GitHub</a> · <a href="assets/cv.pdf?v=20261124" target="_blank" rel="noopener">CV</a></p>
   </section>
 </main>
 

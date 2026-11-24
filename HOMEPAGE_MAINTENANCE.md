@@ -4,6 +4,20 @@ This document explains how the homepage is organized, how each file is used, and
 
 ## November 2026 Workflow Update
 
+**24 November publication and logo audit.** The 15 conference/journal entries naming
+Mingjun Wang on [Bei Yu's publication list](https://www.cse.cuhk.edu.hk/~byu/publications.html)
+are represented here. The one addition is C414, SPECTRA-3D (DATE 2027);
+the equal-contribution marks for Guanqi Li and Mingjun Wang are author-confirmed.
+The public list now has 22 distinct works (20 conferences, two journals; 13 first/co-first).
+[arXiv:2611.11475](https://arxiv.org/abs/2611.11475) links to the existing CU-3D
+record, not another paper. Graph World Models is a preprint, listed only in the private CV.
+Publisher records take precedence where author order differs from the group list.
+
+`assets/ict.svg` contains the five original colored emblem shapes from
+`ictlogo.drawio.svg`, without the adjacent wordmark, nested viewport or draw.io
+editor metadata. Use the emblem at both small sizes, not the full institutional
+wordmark. Update the year links together with year headings when adding a new year.
+
 The editable source remains this repository. The preferred website is `https://wang-mingjun.github.io/`; `https://xin-xi-xiao.github.io/` publishes the same content. Both use GitHub Pages **Deploy from a branch**, `main`, `/ (root)`, HTTPS, and no custom domain.
 
 ### Website and CV source ownership
