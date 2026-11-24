@@ -19,6 +19,7 @@ const { pathToFileURL } = require('node:url');
       page.on('pageerror', error => failures.push(error.message));
       page.on('requestfailed', request => failures.push(request.url()));
       await page.goto(url, { waitUntil: 'networkidle' });
+      await page.locator('.affiliation-logos').screenshot({ path: path.join(output, `logos-${width}.png`) });
       await page.screenshot({ path: path.join(output, `home-${width}.png`) });
       const layout = await page.evaluate(() => {
         const portrait = document.querySelector('.portrait-card');
@@ -37,10 +38,14 @@ const { pathToFileURL } = require('node:url');
       });
       const accessibility = await new AxeBuilder({ page }).withTags(['wcag2a', 'wcag2aa', 'wcag21aa']).analyze();
       await page.locator('.nav-links a[href="#publications"]').click();
+      await page.locator('.nav-links a[href="#publications"][aria-current="location"]').waitFor();
       await page.waitForTimeout(700);
       const anchorTop = await page.locator('#publications').evaluate(el => el.getBoundingClientRect().top);
       const navBottom = await page.locator('.topbar').evaluate(el => el.getBoundingClientRect().bottom);
       await page.screenshot({ path: path.join(output, `publications-${width}.png`) });
+      await page.locator('#research a[href="#pub-spectra3d"]').focus();
+      await page.keyboard.press('Enter');
+      await page.locator('#pub-spectra3d:target').waitFor();
       await page.locator('#skills').scrollIntoViewIfNeeded();
       await page.screenshot({ path: path.join(output, `skills-${width}.png`) });
       const report = { width, layout, failures, anchorClear: anchorTop >= navBottom - 1,

@@ -13,6 +13,8 @@
   --c-primary: #1F3A93;
   --c-primary-dark: #14245C;
   --c-primary-soft: #EEF2FF;
+  --c-interaction: #226C68;
+  --c-interaction-soft: #EFF7F5;
   --c-text: #1F2937;
   --c-text-muted: #59616E;
   --c-bg: #FFFFFF;
@@ -149,6 +151,13 @@ a:hover {
   color: var(--c-text-muted);
 }
 
+.nav-links a:is(:hover, :focus-visible, [aria-current="location"]) {
+  color: var(--c-interaction);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
+
 .hero {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 190px;
@@ -274,10 +283,17 @@ h3 {
   object-fit: contain;
 }
 
-/* The 36px oval paints about 34px across, matching the adjacent marks. */
+/* Compensate for the different inset margins inside the crest and oval. */
+.logo-frame .cuhk-mark,
+.edu-item img.cuhk-mark {
+  width: 35px;
+  max-width: 100%;
+  height: auto;
+}
+
 .logo-frame .ict-mark,
 .edu-item img.ict-mark {
-  width: 36px;
+  width: 35px;
   height: auto;
   max-width: 100%;
   max-height: none;
@@ -471,8 +487,20 @@ h3 {
   transition: box-shadow 160ms ease;
 }
 
-.pub-card:hover {
+.pub-card:hover,
+.pub-card:focus-within {
   box-shadow: 0 8px 24px rgba(31, 41, 55, 0.06);
+}
+
+.pub-card:target {
+  border-color: var(--c-interaction);
+  background: var(--c-interaction-soft);
+}
+
+.pub-links a:is(:hover, :focus-visible),
+.pub-index a:is(:hover, :focus-visible) {
+  color: var(--c-interaction);
+  text-decoration-thickness: 2px;
 }
 
 .venue-block {
