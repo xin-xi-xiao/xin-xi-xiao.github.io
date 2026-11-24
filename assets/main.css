@@ -259,6 +259,7 @@ h3 {
 .logo-frame {
   width: 42px;
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
   grid-template-rows: 42px auto;
   place-items: center;
   white-space: nowrap;
@@ -273,10 +274,10 @@ h3 {
   object-fit: contain;
 }
 
-/* Match the oval emblem's visible height to the crest and round seal. */
+/* The 36px oval paints about 34px across, matching the adjacent marks. */
 .logo-frame .ict-mark,
 .edu-item img.ict-mark {
-  width: 42px;
+  width: 36px;
   height: auto;
   max-width: 100%;
   max-height: none;
@@ -719,7 +720,7 @@ h3 {
 
   .nav-links {
     flex-wrap: wrap;
-    gap: 4px 12px;
+    gap: 4px 8px;
     width: 100%;
     white-space: nowrap;
   }
@@ -784,5 +785,13 @@ h3 {
   .skill-group {
     grid-template-columns: 1fr;
     gap: 6px;
+  }
+}
+
+@media (max-width: 359px) {
+  .nav-links {
+    display: grid;
+    grid-template-columns: repeat(3, max-content);
+    column-gap: 20px;
   }
 }
