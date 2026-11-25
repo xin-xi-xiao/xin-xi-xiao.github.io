@@ -105,8 +105,10 @@ check(survey["format"] == "Invited Paper", "ASP-DAC 2026 survey invitation is mi
 for p in publications.records:
     authors = p["authors"]
     role = ("Co-first †" if "Mingjun Wang†" in authors else "Co-corresponding ‡" if "Mingjun Wang‡" in authors
-            else "First author" if authors.startswith("Mingjun Wang,") else "Co-author")
+            else "")
     check(p["role"] == role, f"Role tag differs from author line: {p['title']}")
+    if role:
+        check(authors.count(role[-1]) >= 2, f"Shared role has only one marked author: {p['title']}")
     check(re.fullmatch(r".+ 20\d{2}", p["venue"]), f"Expected venue and year only: {p['venue']}")
     check(p["type"] == ("Journal" if p["meta"].startswith("IEEE Transactions") else "Conference"),
           f"Venue/type mismatch: {p['title']}")

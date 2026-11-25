@@ -1,5 +1,5 @@
 # jemdoc: addtitle{Mingjun Wang}
-# jemdoc: addcss{assets/main.css?v=20261125}
+# jemdoc: addcss{assets/main.css?v=20261125b}
 
 ~~~html
 <a class="skip-link" href="#about">Skip to content</a>
@@ -34,7 +34,7 @@
         <a href="https://scholar.google.com/citations?user=E9aUbvAAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a>
         <a href="https://github.com/xin-xi-xiao" target="_blank" rel="noopener">GitHub</a>
       </div>
-      <a class="primary-button" href="assets/cv.pdf?v=20261125" target="_blank" rel="noopener">CV (PDF)</a>
+      <a class="primary-button" href="assets/cv.pdf?v=20261125b" target="_blank" rel="noopener">CV (PDF)</a>
     </div>
     <aside class="hero-side" aria-label="Profile portrait and affiliations">
       <img class="portrait-card" src="assets/photo.jpg?v=20260713a" alt="Portrait of Mingjun Wang" width="132" height="185" />
@@ -134,15 +134,15 @@
           <div class="pub-tags">
             <span class="venue badge-aspdac">ASP-DAC 2027</span>
             <span class="type-badge conference">Conference</span>
-            <span class="role-badge">First author</span>
+            <span class="role-badge">Co-first †</span>
             <span class="format-badge">Invited Paper</span>
             <span class="status-badge">Accepted</span>
           </div>
           <h3>CU-3D: A Scalable Legality-Aware RTL-to-GDS Flow for 3D-IC Physical Design</h3>
-          <p class="authors"><strong>Mingjun Wang</strong>, Guanqi Li, Yihan Wen, Lancheng Zou, Mingjun Li, Feng Gu, Fengrui Liu, Jianan Mu, Yuxuan Zhao, Tsung-Yi Ho, Huawei Li, Sung Kyu Lim, Bei Yu.</p>
+          <p class="authors"><strong>Mingjun Wang†</strong>, Guanqi Li†, Yihan Wen, Lancheng Zou, Mingjun Li, Feng Gu, Fengrui Liu, Jianan Mu, Yuxuan Zhao, Tsung-Yi Ho, Huawei Li, Sung Kyu Lim, Bei Yu.</p>
           <p class="meta">IEEE/ACM Asia and South Pacific Design Automation Conference · Tokyo, Jan. 25–28, 2027.</p>
-          <p class="desc">Plans hybrid bonds for data, clocks and power before routing. All 11 test designs passed signal-connectivity checks with zero backend design-rule violations.</p>
-          <div class="pub-links"><a href="https://arxiv.org/abs/2611.11475" target="_blank" rel="noopener">arXiv</a><a href="https://easychair.org/smart-program/ASP-DAC2027/2027-01-27.html#talk:332283" target="_blank" rel="noopener">Program</a></div>
+          <p class="desc">Coordinates data, clock and power bonds in a commercial RTL-to-GDS flow. All 10 post-route designs passed signal-connectivity checks with zero backend design-rule violations. In five paired 2D/3D comparisons, worst setup slack improved by 1–28 ps.</p>
+          <div class="pub-links"><a href="https://arxiv.org/pdf/2611.11475v2" target="_blank" rel="noopener">Paper (PDF)</a><a href="https://arxiv.org/abs/2611.11475" target="_blank" rel="noopener">arXiv</a><a href="https://easychair.org/smart-program/ASP-DAC2027/2027-01-27.html#talk:332283" target="_blank" rel="noopener">Program</a></div>
         </div>
       </article>
 
@@ -186,7 +186,6 @@
           <div class="pub-tags">
             <span class="venue badge-aspdac">ASP-DAC 2027</span>
             <span class="type-badge conference">Conference</span>
-            <span class="role-badge supporting">Co-author</span>
             <span class="status-badge">Accepted</span>
           </div>
           <h3>Logic Resynthesis for Cross-Die Dependencies in Hybrid Bonded 3D ICs</h3>
@@ -285,7 +284,6 @@
           <div class="pub-tags">
             <span class="venue badge-iccad">ICCAD 2026</span>
             <span class="type-badge conference">Conference</span>
-            <span class="role-badge supporting">Co-author</span>
           </div>
           <h3>LibPilot: Knowledge-Constrained Dual-Agent Reasoning for Standard Cell Library Tuning</h3>
           <p class="authors">Yanfang Liu, Zijin Cheng, <strong>Mingjun Wang</strong>, Rongliang Fu, Chao Wang, Bei Yu.</p>
@@ -301,7 +299,6 @@
           <div class="pub-tags">
             <span class="venue badge-iccad">ICCAD 2026</span>
             <span class="type-badge conference">Conference</span>
-            <span class="role-badge supporting">Co-author</span>
           </div>
           <h3>ChatFCM: Comprehension-Synthesis Decoupling for LLM-Based Functional Coverage Model Generation</h3>
           <p class="authors">Yuan Pu, Yudong He, Zhenghao Chen, <strong>Mingjun Wang</strong>, Bingkun Yao, Zhaotan Lin, Qin Chen, Bing Li, Song Chen, Zhuolun He, Wenjian Yu, Yanfeng Li, Bei Yu.</p>
@@ -317,7 +314,6 @@
           <div class="pub-tags">
             <span class="venue badge-iccd">ICCD 2026</span>
             <span class="type-badge conference">Conference</span>
-            <span class="role-badge supporting">Co-author</span>
           </div>
           <h3>MigSizer: Physical-Aware Sizing Improving Analog/RF Circuit Migration</h3>
           <p class="authors">Yanfang Liu, Peng Xu, Yapeng Li, <strong>Mingjun Wang</strong>, Leilei Jin, Rongliang Fu, Tinghuan Chen, Wei Xing, Bei Yu, Tsung-Yi Ho.</p>
@@ -333,7 +329,6 @@
           <div class="pub-tags">
             <span class="venue badge-tcad">IEEE TCAD 2026</span>
             <span class="type-badge journal">Journal</span>
-            <span class="role-badge supporting">Co-author</span>
           </div>
           <h3>Bit-Compressed Concurrent Fault Simulation With Efficient Fault List</h3>
           <p class="authors">Feng Gu, Zhiteng Chao, Hui Wang, Jianan Mu, <strong>Mingjun Wang</strong>, Jun Gao, Yonghao Wang, Jing Ye, Xiaowei Li, Huawei Li.</p>
@@ -349,7 +344,6 @@
           <div class="pub-tags">
             <span class="venue badge-aspdac">ASP-DAC 2026</span>
             <span class="type-badge conference">Conference</span>
-            <span class="role-badge supporting">Co-author</span>
             <span class="format-badge">Invited Paper</span>
           </div>
           <h3>LLM-Assisted Circuit Verification: A Comprehensive Survey</h3>
@@ -384,13 +378,12 @@
           <div class="pub-tags">
             <span class="venue badge-dac">DAC 2025</span>
             <span class="type-badge conference">Conference</span>
-            <span class="role-badge">First author</span>
           </div>
           <h3>MOSS: Multi-Modal Representation Learning on Sequential Circuits</h3>
           <p class="authors"><strong>Mingjun Wang</strong>, Bin Sun, Jianan Mu, Feng Gu, Boyu Han, Tianmeng Yang, Xinyu Zhang, Silin Liu, Yihan Wen, Hui Wang, Jun Gao, Zhiteng Chao, Husheng Han, Zizhen Liu, Shengwen Liang, Jing Ye, Bei Yu, Xiaowei Li, Huawei Li.</p>
           <p class="meta">Design Automation Conference, 2025.</p>
-          <p class="desc">Multi-modal representation learning for sequential circuits.</p>
-          <div class="pub-links"><a href="https://doi.org/10.1109/DAC63849.2025.11132437" target="_blank" rel="noopener">DOI</a><a href="https://dblp.org/rec/conf/dac/WangSMGHYZLWWGCHLLYYLL25" target="_blank" rel="noopener">DBLP</a></div>
+          <p class="desc">Combines a language model for RTL with a graph network for netlists to predict the behavior and timing of sequential circuits.</p>
+          <div class="pub-links"><a href="https://doi.org/10.1109/DAC63849.2025.11132437" target="_blank" rel="noopener">DOI</a><a href="https://www.cse.cuhk.edu.hk/~byu/papers/C264-DAC2025-MOSS.pdf" target="_blank" rel="noopener">Author PDF</a><a href="https://dblp.org/rec/conf/dac/WangSMGHYZLWWGCHLLYYLL25" target="_blank" rel="noopener">DBLP</a></div>
         </div>
       </article>
 
@@ -400,12 +393,11 @@
           <div class="pub-tags">
             <span class="venue badge-dac">DAC 2025</span>
             <span class="type-badge conference">Conference</span>
-            <span class="role-badge">First author</span>
           </div>
           <h3>EPICS: Efficient Parallel Pattern Fault Simulation for Sequential Circuits via Strongly Connected Components</h3>
           <p class="authors"><strong>Mingjun Wang</strong>, Hui Wang, Jianan Mu, Xinyu Zhang, Bin Sun, Yihan Wen, Zizhen Liu, Feng Gu, Jun Gao, Shengwen Liang, Jing Ye, Xiaowei Li, Huawei Li.</p>
           <p class="meta">Design Automation Conference, 2025.</p>
-          <p class="desc">Parallel pattern fault simulation for sequential circuits through SCC-aware decomposition.</p>
+          <p class="desc">Groups feedback loops to reduce redundant simulation events. On the reported benchmarks, EPICS ran 5.94× faster than the commercial baseline at the same fault coverage.</p>
           <div class="pub-links"><a href="https://doi.org/10.1109/DAC63849.2025.11132928" target="_blank" rel="noopener">DOI</a><a href="https://dblp.org/rec/conf/dac/WangWMZSWLGGLYLL25" target="_blank" rel="noopener">DBLP</a></div>
         </div>
       </article>
@@ -416,7 +408,6 @@
           <div class="pub-tags">
             <span class="venue badge-aspdac">ASP-DAC 2025</span>
             <span class="type-badge conference">Conference</span>
-            <span class="role-badge">First author</span>
             <span class="award-badge">Best Paper Nomination</span>
           </div>
           <h3>ETPG: Efficient Transition Fault Simulation via Dual-Strategy Pattern Parallelism and Gate Restructuring</h3>
@@ -438,8 +429,8 @@
           <h3>VIRTUAL: Vector-based Dynamic Power Estimation via Decoupled Multi-Modality Learning</h3>
           <p class="authors">Yuntao Lu†, <strong>Mingjun Wang†</strong>, Yihan Wen, Boyu Han, Jianan Mu, Huawei Li, Bei Yu.</p>
           <p class="meta">International Conference on Computer-Aided Design, 2025.</p>
-          <p class="desc">Decoupled multi-modality learning for vector-based dynamic power estimation.</p>
-          <div class="pub-links"><a href="https://doi.org/10.1109/ICCAD66269.2025.11240833" target="_blank" rel="noopener">DOI</a></div>
+          <p class="desc">Estimates dynamic power from RTL and input waveforms. The paper reports a 14.27× speedup over gate-level power analysis, with a mean absolute percentage error of 23.43%.</p>
+          <div class="pub-links"><a href="https://doi.org/10.1109/ICCAD66269.2025.11240833" target="_blank" rel="noopener">DOI</a><a href="https://www.cse.cuhk.edu.hk/~byu/papers/C294-ICCAD2025-RTLPower.pdf" target="_blank" rel="noopener">Author PDF</a></div>
         </div>
       </article>
 
@@ -449,7 +440,6 @@
           <div class="pub-tags">
             <span class="venue badge-iseda">ISEDA 2025</span>
             <span class="type-badge conference">Conference</span>
-            <span class="role-badge supporting">Co-author</span>
           </div>
           <h3>DFTS: An Efficient Design-for-Test Flow for Scan Design</h3>
           <p class="authors">Jun Gao, <strong>Mingjun Wang</strong>, Jiangwang Liu, Wenjie Li, Zizhen Liu, Jing Ye, Huawei Li.</p>
@@ -466,12 +456,11 @@
           <div class="pub-tags">
             <span class="venue badge-itc">ITC-Asia 2024</span>
             <span class="type-badge conference">Conference</span>
-            <span class="role-badge">First author</span>
           </div>
           <h3>Efficient Functional Safety Method for Gate-Level Fine-Grained Digital Circuits with ISO-26262</h3>
           <p class="authors"><strong>Mingjun Wang</strong>, Hui Wang, Jianan Mu, Zizhen Liu, Jun Gao, Jing Ye, Huawei Li, Xiaowei Li.</p>
           <p class="meta">International Test Conference in Asia, 2024.</p>
-          <p class="desc">A gate-level fine-grained functional safety method for ISO 26262-oriented digital circuits.</p>
+          <p class="desc">Combines gate-level fault simulation with failure modes, effects and diagnostic analysis (FMEDA) to assess digital circuits for ISO 26262 applications.</p>
           <div class="pub-links"><a href="https://doi.org/10.1109/ITC-ASIA62534.2024.10661312" target="_blank" rel="noopener">DOI</a><a href="https://dblp.org/rec/conf/itc-asia/WangWMLGYLL24" target="_blank" rel="noopener">DBLP</a></div>
         </div>
       </article>
@@ -482,7 +471,6 @@
           <div class="pub-tags">
             <span class="venue badge-iccad">ICCAD 2024</span>
             <span class="type-badge conference">Conference</span>
-            <span class="role-badge supporting">Co-author</span>
             <span class="award-badge">Best Paper Nomination</span>
           </div>
           <h3>DDP-Fsim: Efficient and Scalable Fault Simulation for Deterministic Patterns with Two-Dimensional Parallelism</h3>
@@ -570,7 +558,7 @@
     <blockquote>I welcome collaborations on LLM4EDA / AI4EDA and 3D IC design automation, especially tool-using agents, circuit learning, RTL-to-GDS flows, and timing closure. I also work on fault simulation and hardware verification.</blockquote>
     <p>Email: <a href="mailto:wangmingjun000613@gmail.com">wangmingjun000613@gmail.com</a> · <a href="mailto:mjwang25@cse.cuhk.edu.hk">mjwang25@cse.cuhk.edu.hk</a></p>
     <p>CUHK · Department of Computer Science and Engineering · Advisor: <a href="https://www.cse.cuhk.edu.hk/~byu/" target="_blank" rel="noopener">Prof. Bei Yu</a></p>
-    <p><a href="https://scholar.google.com/citations?user=E9aUbvAAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a> · <a href="https://github.com/xin-xi-xiao" target="_blank" rel="noopener">GitHub</a> · <a href="assets/cv.pdf?v=20261125" target="_blank" rel="noopener">CV</a></p>
+    <p><a href="https://scholar.google.com/citations?user=E9aUbvAAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a> · <a href="https://github.com/xin-xi-xiao" target="_blank" rel="noopener">GitHub</a> · <a href="assets/cv.pdf?v=20261125b" target="_blank" rel="noopener">CV</a></p>
   </section>
 </main>
 

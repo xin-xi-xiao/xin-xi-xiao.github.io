@@ -486,6 +486,12 @@ h3 {
   font-size: 16px;
 }
 
+.pub-year:target span {
+  color: var(--c-interaction);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
 .pub-card {
   display: grid;
   grid-template-columns: 72px minmax(0, 1fr);
@@ -562,11 +568,6 @@ h3 {
   color: var(--badge-tcad);
 }
 
-.type-badge.conference {
-  border-color: rgba(31, 58, 147, 0.22);
-  color: var(--c-primary);
-}
-
 .award-badge {
   background: #FFF3D9;
   color: #754609;
@@ -578,21 +579,14 @@ h3 {
 }
 
 .status-badge {
-  border: 1px solid rgba(14, 165, 233, 0.25);
-  background: #F0F9FF;
-  color: #0369A1;
+  background: var(--c-bg-soft);
+  color: var(--c-text-muted);
 }
 
 .role-badge {
   border: 1px solid #D9CCE9;
   background: #F7F3FA;
   color: #654187;
-}
-
-.role-badge.supporting {
-  border-color: transparent;
-  background: var(--c-bg-soft);
-  color: var(--c-text-muted);
 }
 
 .badge-icml { --venue-color: var(--badge-icml); background: var(--venue-color); }
@@ -611,6 +605,11 @@ h3 {
 .desc {
   margin: 7px 0 0;
   font-size: var(--fs-meta);
+}
+
+.pub-body .desc {
+  color: var(--c-text);
+  font-size: 14px;
 }
 
 .venue-block {

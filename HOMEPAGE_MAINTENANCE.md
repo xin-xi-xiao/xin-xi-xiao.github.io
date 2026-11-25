@@ -327,13 +327,13 @@ Recommended publication ordering:
 
 ### Per-paper audit (2026-11-25)
 
-Keep one `.pub-tags` group per record, in this order: venue/year, conference or journal, Mingjun's author role, presentation format or distinction, then status when needed. The badge must agree with the byline: † means equal contribution; ‡ means co-corresponding. Format (`Poster`, `Invited Paper`) is separate from recognition (`Spotlight`, `Best Paper Nomination`). Use `Accepted` for forthcoming entries; the absence of that badge does not assert that a publisher DOI is live.
+Keep one `.pub-tags` group per record: venue/year, conference or journal, special authorship (only when applicable), format or distinction, then status when needed. Bold Mingjun in every byline. Only display a role badge for shared first (†) or shared corresponding (‡) authorship; mark the relevant names, using the paper's footnote or author confirmation rather than inferring contribution from order. Ordinary first authors and co-authors need no badge. Format (`Poster`, `Invited Paper`) is separate from recognition (`Spotlight`, `Best Paper Nomination`). Use `Accepted` for forthcoming entries; the absence of that badge does not assert that a publisher DOI is live.
 
 Put the most useful verified destination first: it is also the title link in both CVs. Distinguish a conference program, a group listing, an author PDF and the published article. Report experimental results with their measured quantity, benchmark and comparator where applicable, rather than an undated citation count. Cross-checks against [Bei Yu's publication list](https://www.cse.cuhk.edu.hk/~byu/publications.html) matched all 15 entries listing Mingjun on that page; it is not a complete list of his work without Bei Yu.
 
 | Work / primary record | Venue | Mingjun's role | Audit note |
 |---|---|---|---|
-| [CU-3D](https://arxiv.org/abs/2611.11475) | ASP-DAC 2027 | First author | Invited; preprint and official session linked separately. |
+| [CU-3D](https://arxiv.org/pdf/2611.11475v2) | ASP-DAC 2027 | Co-first † | Invited. The v2 PDF, p. 1, credits Mingjun Wang and Guanqi Li equally. Section 8.2: 10 post-route designs checked; Table 2: five paired 2D/3D comparisons, 1–28 ps improvement in worst setup slack. Use the versioned paper rather than the abstract landing page for these figures. |
 | [SPECTRA-3D](https://www.cse.cuhk.edu.hk/~byu/publications.html) | DATE 2027 | Co-first † | Accepted; CUHK C414. No paper-specific public full text verified. |
 | [HOIST](https://yf0812.github.io/_pages/paper/ASPDAC27_HOIST_zhongru.pdf) | ASP-DAC 2027 | Co-corresponding ‡ | Invited status is not claimed; corresponding authors confirmed on the author PDF. |
 | [Logic Resynthesis](https://easychair.org/smart-program/ASP-DAC2027/2027-01-28.html#talk:329661) | ASP-DAC 2027 | Co-author | Official ASP-DAC program entry, not presented as proceedings. |

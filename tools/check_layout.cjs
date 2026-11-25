@@ -43,6 +43,13 @@ const { pathToFileURL } = require('node:url');
       const anchorTop = await page.locator('#publications').evaluate(el => el.getBoundingClientRect().top);
       const navBottom = await page.locator('.topbar').evaluate(el => el.getBoundingClientRect().bottom);
       await page.screenshot({ path: path.join(output, `publications-${width}.png`) });
+      await page.locator('.pub-index a[href="#papers-2025"]').focus();
+      await page.keyboard.press('Enter');
+      await page.locator('#papers-2025:target').waitFor();
+      await page.waitForFunction(bottom => {
+        const top = document.getElementById('papers-2025').getBoundingClientRect().top;
+        return top >= bottom - 1 && top <= bottom + 40;
+      }, navBottom);
       await page.locator('#research a[href="#pub-spectra3d"]').focus();
       await page.keyboard.press('Enter');
       await page.locator('#pub-spectra3d:target').waitFor();
