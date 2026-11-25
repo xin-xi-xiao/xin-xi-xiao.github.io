@@ -302,14 +302,14 @@ Each paper should include:
 - Type badge: `Conference` or `Journal`
 - Title
 - Authors, with `<strong>Mingjun Wang</strong>`
-- Metadata line starting with `Conference paper · ...` or `Journal article · ...`
+- Metadata line with the full venue and year. For journals, use the final volume, issue and pages when assigned.
 - Short factual description
 - Public links when available
 
 For co-first-author papers, use:
 
 ```html
-<span class="award-badge">Co-first †</span>
+<span class="role-badge">Co-first †</span>
 ```
 
 and keep the note:
@@ -324,6 +324,37 @@ Recommended publication ordering:
 2. Within the same year, first-author/co-first AI4EDA and 3D IC papers first
 3. Journal papers remain clearly visible, especially IEEE TCAD
 4. Fault simulation and functional-safety papers remain included as the foundation thread
+
+### Per-paper audit (2026-11-25)
+
+Keep one `.pub-tags` group per record, in this order: venue/year, conference or journal, Mingjun's author role, presentation format or distinction, then status when needed. The badge must agree with the byline: † means equal contribution; ‡ means co-corresponding. Format (`Poster`, `Invited Paper`) is separate from recognition (`Spotlight`, `Best Paper Nomination`). Use `Accepted` for forthcoming entries; the absence of that badge does not assert that a publisher DOI is live.
+
+Put the most useful verified destination first: it is also the title link in both CVs. Distinguish a conference program, a group listing, an author PDF and the published article. Report experimental results with their measured quantity, benchmark and comparator where applicable, rather than an undated citation count. Cross-checks against [Bei Yu's publication list](https://www.cse.cuhk.edu.hk/~byu/publications.html) matched all 15 entries listing Mingjun on that page; it is not a complete list of his work without Bei Yu.
+
+| Work / primary record | Venue | Mingjun's role | Audit note |
+|---|---|---|---|
+| [CU-3D](https://arxiv.org/abs/2611.11475) | ASP-DAC 2027 | First author | Invited; preprint and official session linked separately. |
+| [SPECTRA-3D](https://www.cse.cuhk.edu.hk/~byu/publications.html) | DATE 2027 | Co-first † | Accepted; CUHK C414. No paper-specific public full text verified. |
+| [HOIST](https://yf0812.github.io/_pages/paper/ASPDAC27_HOIST_zhongru.pdf) | ASP-DAC 2027 | Co-corresponding ‡ | Invited status is not claimed; corresponding authors confirmed on the author PDF. |
+| [Logic Resynthesis](https://easychair.org/smart-program/ASP-DAC2027/2027-01-28.html#talk:329661) | ASP-DAC 2027 | Co-author | Official ASP-DAC program entry, not presented as proceedings. |
+| [Distill3D](https://confcats-event-sessions.s3.us-east-1.amazonaws.com/iccad26/uploads/ICCAD_2026_Program_v18.pdf#page=107) | ICCAD 2026 | Co-first † | Previously listed DOI returned HTTP 404. Official program p. 107 until a publisher record resolves. |
+| [CircuitNet 3.0](https://proceedings.iclr.cc/paper_files/paper/2026/hash/2e0f5561c1553a97cee5fa64575358c9-Abstract-Conference.html) | ICLR 2026 | Co-first † | Poster is a format; final proceedings author order retained. |
+| [DomSim](https://doi.org/10.1109/TCAD.2025.3624173) | IEEE TCAD 2026 | Co-first † | Final issue 45(6); 2025 is the early-access year, not the issue year. |
+| [ATLAS](https://doi.org/10.1145/3770743.3812688) | DAC 2026 | Co-first † | Title and byline match the DAC publisher deposit. |
+| [AnalogVerifier](https://proceedings.mlr.press/v306/liu26en.html) | ICML 2026 | Co-first † | PMLR proceedings with open PDF; scope the pass-rate range to five circuits. |
+| [LibPilot](https://yf0812.github.io/_pages/paper/ICCAD2026.pdf) | ICCAD 2026 | Co-author | Author PDF; official ICCAD program p. 43. No unverified publisher link. |
+| [ChatFCM](https://confcats-event-sessions.s3.us-east-1.amazonaws.com/iccad26/uploads/ICCAD_2026_Program_v18.pdf#page=51) | ICCAD 2026 | Co-author | Official ICCAD program p. 51; retain the author-confirmed byline. |
+| [MigSizer](https://yf0812.github.io/_pages/paper/ICCD26_MigSizer_final.pdf) | ICCD 2026 | Co-author | Author manuscript matched by title/byline; no publisher DOI asserted. |
+| [Bit-Compressed](https://doi.org/10.1109/TCAD.2026.3694337) | IEEE TCAD 2026 | Co-author | Final issue 45(11), pp. 5615–5628; not still Early Access. |
+| [LLM-Assisted Circuit Verification](https://doi.org/10.1109/ASP-DAC66049.2026.11420692) | ASP-DAC 2026 | Co-author | Invited paper, not a journal survey or an award. |
+| [RTLDistil](https://proceedings.mlr.press/v267/wang25dn.html) | ICML 2025 | Co-first † | ICML Spotlight; arrival-time MAPE from Table 2; code is separately linked. |
+| [MOSS](https://doi.org/10.1109/DAC63849.2025.11132437) | DAC 2025 | First author | DOI first; use the publisher's byline rather than transposing Jun Gao. |
+| [EPICS](https://doi.org/10.1109/DAC63849.2025.11132928) | DAC 2025 | First author | DOI first, DBLP second; no change to first authorship. |
+| [ETPG](https://doi.org/10.1145/3658617.3697759) | ASP-DAC 2025 | First author | Best Paper Nomination is a nomination, not a win. |
+| [VIRTUAL](https://doi.org/10.1109/ICCAD66269.2025.11240833) | ICCAD 2025 | Co-first † | Shared first authorship is a role, not a prize. |
+| [DFTS](https://ieeexplore.ieee.org/document/11101155) | ISEDA 2025 | Co-author | Second author; IEEE document number verified against the DOI deposit. |
+| [Functional Safety / ISO 26262](https://doi.org/10.1109/ITC-ASIA62534.2024.10661312) | ITC-Asia 2024 | First author | First author; retain the paper title's original ISO-26262 spelling. |
+| [DDP-Fsim](https://doi.org/10.1145/3676536.3676701) | ICCAD 2024 | Co-author | Second author; keep Best Paper Nomination separate from authorship. |
 
 ## 9. Award Updates
 

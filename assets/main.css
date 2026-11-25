@@ -85,11 +85,14 @@ a:hover {
   text-decoration: underline;
 }
 
-.prose a,
-.focus-card p a,
-.contact p a {
+:is(.prose, .focus-card p, .contact p, .link-row) a {
   text-decoration: underline;
   text-underline-offset: 3px;
+}
+
+:is(.prose, .focus-card p, .contact p, .link-row) a:is(:hover, :focus-visible) {
+  color: var(--c-interaction);
+  text-decoration-thickness: 2px;
 }
 
 .container {
@@ -454,6 +457,13 @@ h3 {
 
 .equal-note { margin: 0; }
 
+.pub-index nav a,
+.pub-links a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+}
+
 .pub-year {
   display: flex;
   align-items: center;
@@ -516,20 +526,29 @@ h3 {
   text-align: center;
 }
 
+.pub-tags {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 5px 6px;
+  margin-bottom: 8px;
+}
+
 .venue,
 .type-badge,
+.format-badge,
 .award-badge,
 .role-badge,
 .status-badge {
   display: inline-flex;
   align-items: center;
   min-height: 22px;
-  margin: 0 6px 8px 0;
   padding: 2px 8px;
   border-radius: 4px;
   color: #fff;
   font-size: 12px;
-  font-weight: 800;
+  font-weight: 650;
+  line-height: 1.4;
 }
 
 .type-badge {
@@ -549,7 +568,13 @@ h3 {
 }
 
 .award-badge {
-  background: var(--c-accent);
+  background: #FFF3D9;
+  color: #754609;
+}
+
+.format-badge {
+  background: #EAF3F2;
+  color: #295E59;
 }
 
 .status-badge {
@@ -562,6 +587,12 @@ h3 {
   border: 1px solid #D9CCE9;
   background: #F7F3FA;
   color: #654187;
+}
+
+.role-badge.supporting {
+  border-color: transparent;
+  background: var(--c-bg-soft);
+  color: var(--c-text-muted);
 }
 
 .badge-icml { --venue-color: var(--badge-icml); background: var(--venue-color); }
@@ -597,9 +628,13 @@ h3 {
 .pub-links {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 10px;
+  gap: 2px 16px;
+  margin-top: 6px;
   font-size: var(--fs-meta);
+}
+
+.pub-links a:first-child {
+  font-weight: 700;
 }
 
 .experience-list {

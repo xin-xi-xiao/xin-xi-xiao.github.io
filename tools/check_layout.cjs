@@ -32,7 +32,7 @@ const { pathToFileURL } = require('node:url');
             const style = getComputedStyle(card);
             return style.borderLeftWidth === style.borderRightWidth && style.borderLeftColor === style.borderRightColor;
           }),
-          textOverflow: [...document.querySelectorAll('h1, h2, h3, p, .skill-items, td, th')]
+          textOverflow: [...document.querySelectorAll('h1, h2, h3, p, .pub-tags, .pub-tags span, .pub-links, .skill-items, td, th')]
             .filter(el => el.scrollWidth > el.clientWidth + 1).map(el => el.textContent.slice(0, 100)),
         };
       });

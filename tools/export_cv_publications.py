@@ -19,12 +19,13 @@ class Publications(HTMLParser):
         attrs = dict(attrs)
         classes = attrs.get("class", "").split()
         if tag == "article" and "pub-card" in classes:
-            self.record = {"title": "", "authors": "", "meta": "", "honors": "", "type": "", "status": "", "link": ""}
+            self.record = dict.fromkeys(("title", "authors", "meta", "honors", "format", "type", "status", "role", "venue", "link"), "")
         if self.record is None:
             return
         if tag == "a" and attrs.get("href", "").startswith("https://") and not self.record["link"]:
             self.record["link"] = attrs["href"]
-        fields = {"authors": "authors", "meta": "meta", "award-badge": "honors", "type-badge": "type", "status-badge": "status"}
+        fields = {"authors": "authors", "meta": "meta", "venue": "venue", "role-badge": "role",
+                  "format-badge": "format", "award-badge": "honors", "type-badge": "type", "status-badge": "status"}
         field = "title" if tag == "h3" else next((fields[c] for c in classes if c in fields), None)
         if field:
             self.field, self.end_tag = field, tag
@@ -91,9 +92,7 @@ def export(source, output):
                     break
             if record["status"]:
                 meta += " " + record["status"] + "."
-            honors = record["honors"]
-            if honors.startswith("Co-first"):
-                honors = ""
+            honors = " · ".join(filter(None, (record["format"], record["honors"])))
             title = tex(record["title"])
             if record["link"]:
                 title = r"\href{" + tex_url(record["link"]) + "}{" + title + "}"

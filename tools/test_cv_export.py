@@ -31,6 +31,10 @@ class ExportTests(unittest.TestCase):
         spectra = next(line for line in result.splitlines() if "SPECTRA-3D" in line)
         self.assertIn(r"Guanqi Li\textsuperscript{\dag}, \textbf{Mingjun Wang}\textsuperscript{\dag}, Siqi Hong", spectra)
         self.assertIn("Dresden", spectra)
+        poster = next(line for line in result.splitlines() if "CircuitNet 3.0:" in line)
+        self.assertTrue(poster.endswith("{Poster}"))
+        self.assertTrue(spectra.endswith("Accepted.}{}"))
+        self.assertNotIn("{Co-first", result)
         self.assertIn(r"\href{https://www.cse.cuhk.edu.hk/~byu/", result)
         self.assertNotIn(r"\href{https://www.cse.cuhk.edu.hk/\textasciitilde", result)
 

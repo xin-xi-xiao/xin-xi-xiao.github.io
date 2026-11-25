@@ -101,7 +101,17 @@ check(all(p["link"].startswith("https://") for p in publications.records), "Publ
 check(sum(p["authors"].startswith("Mingjun Wang") or "Mingjun Wang†" in p["authors"] for p in publications.records) == 13, "Expected 13 first/co-first-author papers")
 check(any(p["title"].startswith("MigSizer:") for p in publications.records), "Confirmed accepted MigSizer paper is missing")
 survey = next(p for p in publications.records if p["title"].startswith("LLM-Assisted Circuit Verification:"))
-check("Invited Paper" in survey["honors"], "ASP-DAC 2026 survey invitation is missing")
+check(survey["format"] == "Invited Paper", "ASP-DAC 2026 survey invitation is missing")
+for p in publications.records:
+    authors = p["authors"]
+    role = ("Co-first †" if "Mingjun Wang†" in authors else "Co-corresponding ‡" if "Mingjun Wang‡" in authors
+            else "First author" if authors.startswith("Mingjun Wang,") else "Co-author")
+    check(p["role"] == role, f"Role tag differs from author line: {p['title']}")
+    check(re.fullmatch(r".+ 20\d{2}", p["venue"]), f"Expected venue and year only: {p['venue']}")
+    check(p["type"] == ("Journal" if p["meta"].startswith("IEEE Transactions") else "Conference"),
+          f"Venue/type mismatch: {p['title']}")
+    check(p["format"] in {"", "Poster", "Invited Paper"} and p["honors"] in {"", "Spotlight", "Best Paper Nomination"},
+          f"Misclassified distinction: {p['title']}")
 check(len(re.findall(r'<p class="authors">.*?<strong>Mingjun Wang[†‡]?</strong>', html)) == 22, "Owner not bold in every paper")
 hoist = next(p for p in publications.records if p["title"].startswith("HOIST:"))
 check("Mingjun Wang‡" in hoist["authors"] and "Binwu Zhu‡" in hoist["authors"] and "Mingjun Wang†" not in hoist["authors"], "Incorrect HOIST corresponding-author marks")
